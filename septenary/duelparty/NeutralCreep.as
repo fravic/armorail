@@ -37,8 +37,8 @@ package septenary.duelparty {
             _movement.kill();
 		}
 
-        public function payoutBounty():int {
-            return _bounty;
+        public function payoutBounty():Object {
+            return {coins:_bountyCoins, creepKills:1};
         }
 
         protected function initMovement():void {

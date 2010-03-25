@@ -4,6 +4,6 @@ package septenary.duelparty {
         function getRearGuard():Fighter;
         function isFacingForward():Boolean;
         function damage(damage:int, fromFront:Boolean, fromCounter:Boolean):void;
-        function payoutBounty():int;
+        function payoutBounty():Object;
     }
 }
