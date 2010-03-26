@@ -8,14 +8,20 @@ package septenary.duelparty {
         protected var _statsForPlayers:Dictionary;
 
         public function BoardExtro(local:Player, players:Array) {
+            const boxTopY:Number = 200;
             const boxSpacing:Number = 200;
+
+            _alwaysOnTop = true;
 
             _local = local;
             _players = players;
 
+            var placements:Array = GameInterface.getGameInterface().placementsForPlayers(_players);
+
             for (var i:int = 0; i < players.length; i++) {
-                var box:EndStatsBox = endStatsBoxForPlayer(players[i]);
-                box.y = i * boxSpacing;
+                var box:EndStatsBox = endStatsBoxForPlayer(players[i], placements[i]);
+                box.x = DuelParty.stageWidth/2;
+                box.y = i * boxSpacing + boxTopY;
                 addChild(box);
             }
 
@@ -24,13 +30,14 @@ package septenary.duelparty {
             super();
         }
 
-        protected function endStatsBoxForPlayer(player:Player):EndStatsBox {
+        protected function endStatsBoxForPlayer(player:Player, placement:int):EndStatsBox {
             var newBox:EndStatsBox = new EndStatsBox();
 
             newBox.lblTotalCoins.text = player.gameStats.totalCoins;
             newBox.lblPlayerKills.text = player.gameStats.playerKills;
             newBox.lblFighterKills.text = player.gameStats.fighterKills;
             newBox.lblCreepKills.text = player.gameStats.creepKills;
+            newBox.placement.gotoAndStop(placement);
 
             if (player == _local) {
                     
