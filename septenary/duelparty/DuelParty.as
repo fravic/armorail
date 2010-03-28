@@ -10,7 +10,9 @@ package septenary.duelparty {
 	import flash.utils.Timer;
 
 	public class DuelParty extends Sprite {
-		
+
+        private static var activeGame:DuelParty;
+
 		public static const UPDATE_INTERVAL:int = 33;
         public static var stageWidth:Number;
         public static var stageHeight:Number;
@@ -19,7 +21,13 @@ package septenary.duelparty {
 		protected var _currentState:Screen;
 		protected var _updateTimer:Timer = new Timer(DuelParty.UPDATE_INTERVAL);
 
+        public static function getGame():DuelParty {
+            return activeGame;
+        }
+
 		public function DuelParty():void {
+            activeGame = this;
+
             this.stage.scaleMode = StageScaleMode.NO_SCALE;
             this.stage.align = StageAlign.TOP_LEFT;
             this.stage.addEventListener(Event.RESIZE, stageResized);
@@ -35,7 +43,7 @@ package septenary.duelparty {
 			_updateTimer.start();
 
             addChild(new BlackTransition());
-			switchState(GameScreen, {});			
+			switchState(MainMenuScreen, {});			
 		}
 				
 		public function update(e:TimerEvent):void {
