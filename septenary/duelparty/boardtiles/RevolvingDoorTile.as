@@ -70,7 +70,7 @@ package septenary.duelparty.boardtiles {
             }
 		}
 
-        public override function arrive(fightable:Fightable):void {
+        public override function arrive(fightable:Fightmaster):void {
             super.arrive(fightable);
 
             var dooredTile:BoardTile = getDooredTile();

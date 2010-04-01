@@ -1,12 +1,10 @@
 package septenary.duelparty {
     import com.greensock.TweenLite;
-    import flash.events.EventDispatcher;
     import flash.display.Sprite;
     import flash.geom.Point;
 
-    public class FightableMovement extends EventDispatcher {
+    public class FightableMovement extends TrainCarMovement {
 
-        protected var _fightable:Sprite;
         protected var _currentTile:BoardTile;
         protected var _movedAside:Boolean = false;
         protected var _movedAsideDir:Number = 0;
@@ -22,7 +20,7 @@ package septenary.duelparty {
         }
 
         public function FightableMovement(fightable:Sprite) {
-            _fightable = fightable;
+            super(fightable);
 
             GameBoard.getGameBoard().addEventListener(GameEvent.START_TURN, turnStartHandler, false, 0, true);
         }
@@ -32,10 +30,10 @@ package septenary.duelparty {
         }
 
         protected function turnStartHandler(e:GameEvent):void {
-            if (_fightable == e.data.player) {
-                unMoveAside();
+            if (_display == e.data.player) {
+                unMoveTrainAside();
             } else if ((e.data.player.movement as FightableMovement).currentTile == _currentTile) {
-                moveAside(true);
+                moveTrainAside(true);
             }
         }
 
@@ -44,48 +42,68 @@ package septenary.duelparty {
                 departedCurrentTile(_currentTile);
 			}
 			_currentTile = tile;
-			_fightable.x = _currentTile.x;
-			_fightable.y = _currentTile.y;
+			_display.x = _currentTile.x;
+			_display.y = _currentTile.y;
             arrivedAtNewTile(_currentTile);
+
+            super.teleportTo(new Point(_currentTile.x, _currentTile.y));
 		}
 
-        protected function moveAside(fadeAlpha:Boolean=false):void {
-			const asideMag:Number = 25;
-			const moveTime:Number = 0.25;
+        protected function moveTrainAside(fadeAlpha:Boolean=true):void {
+			if (fadeAlpha) _manager.executeFunctionOnCars("alphaCarAside");
 
-            if (fadeAlpha) moveAsideAlpha();
             if (_movedAside) return;
 
 			var moveDir:Number = moveAsideDir();
-			var moveX:Number = asideMag * Math.cos(moveDir);
-			var moveY:Number = asideMag * Math.sin(moveDir);
-            _movedAsideDir = moveDir;
+            _manager.executeFunctionOnCars("moveCarAsideInDirection", [moveDir]);
 
-			TweenLite.to(_fightable, moveTime, {x:_fightable.x + moveX, y:_fightable.y + moveY, overwrite:false});
-
-			_movedAside = true;
 		}
 
-        protected function moveAsideAlpha():void {
-            const alphaTime:Number = 0.25;
-			const asideAlpha:Number = .3;
-
-			TweenLite.to(_fightable, alphaTime, {alpha:asideAlpha, overwrite:false});
+        protected function unMoveTrainAside():void {
+            _manager.executeFunctionOnCars("unMoveAsideCar");
+            _manager.executeFunctionOnCars("unAlphaCarAside");
         }
 
-		protected function unMoveAside():void {
-			const moveTime:Number = 0.25;
-			if (!_movedAside) return;
+        protected function unAlphaTrainAside():void {
+            _manager.executeFunctionOnCars("unAlphaCarAside");
+        }
 
-			TweenLite.to(_fightable, moveTime, {x:_currentTile.x, y:_currentTile.y, overwrite:false});
-            unMoveAsideAlpha();
+        public function moveCarAsideInDirection(dir:Number):void {
+            const asideMag:Number = 25;
+			const moveTime:Number = 0.25;
+
+            _movedAside = true;
+            _movedAsideDir = dir;
+
+            var moveX:Number = asideMag * Math.cos(dir);
+			var moveY:Number = asideMag * Math.sin(dir);
+
+            TweenLite.to(_display, moveTime, {x:_display.x + moveX, y:_display.y + moveY, overwrite:false});
+        }
+
+        public function unMoveAsideCar():void {
+            const asideMag:Number = 25;
+            const moveTime:Number = 0.25;
+
+           	if (!_movedAside) return;
+
+            var moveX:Number = asideMag * Math.cos(_movedAsideDir + Math.PI);
+			var moveY:Number = asideMag * Math.sin(_movedAsideDir + Math.PI);
+
+			TweenLite.to(_display, moveTime, {x:_display.x + moveX, y:_display.y + moveY, overwrite:false});
 
             _movedAside = false;
-		}
+        }
 
-        protected function unMoveAsideAlpha():void {
+        public function alphaCarAside():void {
             const alphaTime:Number = 0.25;
-			TweenLite.to(_fightable, alphaTime, {alpha:1, overwrite:false});    
+			const asideAlpha:Number = .3;
+            TweenLite.to(_display, alphaTime, {alpha:asideAlpha, overwrite:false});
+        }
+
+        public function unAlphaCarAside():void {
+            const alphaTime:Number = 0.25;
+            TweenLite.to(_display, alphaTime, {alpha:1, overwrite:false});
         }
 
         protected function appendPathDirsFromTileArray(pathDirs:Array, objs:Array):void {
@@ -96,7 +114,6 @@ package septenary.duelparty {
         }
 
         protected function appendPathDirsFromFightableArray(pathDirs:Array, fightables:Array):void {
-            const minMag:Number = 3;
             for (var i:int = 0; i < fightables.length; i++) {
                 var movement:FightableMovement = fightables[i].movement as FightableMovement;
                 if (movement == this || !movement.movedAside) continue;
@@ -136,7 +153,7 @@ package septenary.duelparty {
 		}
 
         protected function arrivedAtNewTile(newTile:BoardTile):void {
-	        dispatchEvent(new GameEvent(GameEvent.MOVEMENT_ARRIVED_AT_TILE, {fightable:_fightable, tile:newTile}));
+	        dispatchEvent(new GameEvent(GameEvent.MOVEMENT_ARRIVED_AT_TILE, {fightable:_display, tile:newTile}));
             newTile.addEventListener(GameEvent.TILE_RESIDENT_ARRIVED, newNeighbourHandler, false, 0, true);
             newTile.addEventListener(GameEvent.TILE_RESIDENT_DEPARTED, neighbourGoneHandler, false, 0, true);
         }
@@ -144,22 +161,22 @@ package septenary.duelparty {
         protected function departedCurrentTile(prevTile:BoardTile):void {
             prevTile.removeEventListener(GameEvent.TILE_RESIDENT_ARRIVED, newNeighbourHandler);
             prevTile.removeEventListener(GameEvent.TILE_RESIDENT_DEPARTED, neighbourGoneHandler);
-			dispatchEvent(new GameEvent(GameEvent.MOVEMENT_DEPARTED_TILE, {fightable:_fightable, tile:prevTile}));
+			dispatchEvent(new GameEvent(GameEvent.MOVEMENT_DEPARTED_TILE, {fightable:_display, tile:prevTile}));
         }
 
         protected function newNeighbourHandler(e:GameEvent):void {
-            if (_fightable == GameBoard.getGameBoard().curTurnPlayer()) {
-                (e.data.fightable.movement as FightableMovement).moveAside(true);
+            if (_display == GameBoard.getGameBoard().curTurnPlayer()) {
+                (e.data.fightable.movement as FightableMovement).moveTrainAside(true);
             } else {
-                moveAside(e.data.fightable == GameBoard.getGameBoard().curTurnPlayer());
+                moveTrainAside(e.data.fightable == GameBoard.getGameBoard().curTurnPlayer());
             }
         }
 
         protected function neighbourGoneHandler(e:GameEvent):void {
-            if (_currentTile.residents.length == 1 || _fightable == _currentTile.residents[0]) {
-                unMoveAside();
+            if (_currentTile.residents.length == 1 || _display == _currentTile.residents[0]) {
+                unMoveTrainAside();
             } else {
-                unMoveAsideAlpha();
+                unAlphaTrainAside();
             }
         }
     }

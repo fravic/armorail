@@ -1,5 +1,5 @@
 package septenary.duelparty {
-    public interface Fightable {
+    public interface Fightmaster {
         function getForeGuard():Fighter;
         function getRearGuard():Fighter;
         function isFacingForward():Boolean;

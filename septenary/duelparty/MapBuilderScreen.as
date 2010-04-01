@@ -307,8 +307,7 @@ package septenary.duelparty {
         protected function checkProxTile():void {
             for (var i:int = 0; i < _boardTiles.length; i++) {
                 var thisTile:BoardTile = _boardTiles[i];
-                var ptDist:Point = (new Point(thisTile.x, thisTile.y)).subtract(new Point(_cursor.x, _cursor.y));
-                var dist:Number = Utilities.magnitude(ptDist);
+                var dist:Number = Point.distance(new Point(thisTile.x, thisTile.y), new Point(_cursor.x, _cursor.y));
                 if (dist < MIN_TILE_DISTANCE) {
                     selectProxTile(thisTile);
                     return;

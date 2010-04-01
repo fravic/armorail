@@ -1,19 +1,15 @@
 package septenary.duelparty {
     import flash.geom.Point;
 
-    public class NeutralCreep extends Fighter implements Fightable {
-
-        protected var _movement:FightableMovement;
-
-        public function get movement():FightableMovement {
-            return _movement;
-        }
+    public class NeutralCreep extends Fighter implements Fightmaster {
 
         public function NeutralCreep() {
             super();
             _counter = 3;
             _health = 5;
-            initMovement();
+            
+            _movement.addEventListener(GameEvent.MOVEMENT_ARRIVED_AT_TILE, arrivedAtTile, false, 0, true);
+            _movement.addEventListener(GameEvent.MOVEMENT_DEPARTED_TILE, departedTile, false, 0, true);
         }
 
         public function getForeGuard():Fighter {
@@ -39,12 +35,6 @@ package septenary.duelparty {
 
         public function payoutBounty():Object {
             return {coins:_bountyCoins, creepKills:1};
-        }
-
-        protected function initMovement():void {
-            _movement = new FightableMovement(this);
-            _movement.addEventListener(GameEvent.MOVEMENT_ARRIVED_AT_TILE, arrivedAtTile, false, 0, true);
-            _movement.addEventListener(GameEvent.MOVEMENT_DEPARTED_TILE, departedTile, false, 0, true);
         }
 
         public function teleportToTile(tile:BoardTile) {
