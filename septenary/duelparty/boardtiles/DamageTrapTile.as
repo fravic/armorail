@@ -22,18 +22,22 @@ package septenary.duelparty.boardtiles {
         }
 
         protected override function trapEffect(player:Player):void {
-            GameEvent.addOneTimeEventListener(player, GameEvent.ACTION_COMPLETE, damageDone);
-
             var damageFront:Boolean;
             if (player.foreGuard && player.rearGuard) {
                 var rand:int = Math.round(Math.random());
                 damageFront = rand != 0;
             } else damageFront = (player.foreGuard != null);
 
+            GameEvent.addOneTimeEventListener(player, GameEvent.ACTION_COMPLETE, damageDone);
             player.damage(_damage, damageFront, true);
         }
 
         protected function damageDone(e:GameEvent):void {
+            GameEvent.addOneTimeEventListener(GameBoard.getGameBoard(), GameEvent.GAME_NOT_OVER, gameNotOver);
+            GameBoard.getGameBoard().checkForGameEnd();
+        }
+
+        protected function gameNotOver(e:GameEvent):void {
             activateDone(e.target as Player);
         }
     }

@@ -1,0 +1,223 @@
+<board background="Default" numPlayers="2">
+  <boardTiles>
+    <tile id="0" x="60" y="60">
+      <type>Base</type>
+      <tilesOut>
+        <tileOut>1</tileOut>
+      </tilesOut>
+      <startPlayer>0</startPlayer>
+    </tile>
+    <tile id="1" x="60" y="165">
+      <type>Mine</type>
+      <tilesOut>
+        <tileOut>2</tileOut>
+      </tilesOut>
+    </tile>
+    <tile id="2" x="60" y="270">
+      <type>Mine</type>
+      <tilesOut>
+        <tileOut>3</tileOut>
+      </tilesOut>
+    </tile>
+    <tile id="3" x="60" y="375">
+      <type>NegMine</type>
+      <tilesOut>
+        <tileOut>4</tileOut>
+      </tilesOut>
+    </tile>
+    <tile id="4" x="210" y="375">
+      <type>Buff</type>
+      <tilesOut>
+        <tileOut>5</tileOut>
+      </tilesOut>
+    </tile>
+    <tile id="5" x="330" y="375">
+      <type>Mine</type>
+      <tilesOut>
+        <tileOut>6</tileOut>
+      </tilesOut>
+    </tile>
+    <tile id="6" x="465" y="375">
+      <type>Node</type>
+      <tilesOut>
+        <tileOut>7</tileOut>
+        <tileOut>25</tileOut>
+      </tilesOut>
+    </tile>
+    <tile id="7" x="465" y="480">
+      <type>Healing</type>
+      <tilesOut>
+        <tileOut>8</tileOut>
+      </tilesOut>
+    </tile>
+    <tile id="8" x="465" y="585">
+      <type>Mine</type>
+      <tilesOut>
+        <tileOut>9</tileOut>
+      </tilesOut>
+    </tile>
+    <tile id="9" x="465" y="705">
+      <type>Mine</type>
+      <tilesOut>
+        <tileOut>10</tileOut>
+      </tilesOut>
+    </tile>
+    <tile id="10" x="465" y="810">
+      <type>DamageTrap</type>
+      <tilesOut>
+        <tileOut>11</tileOut>
+        <tileOut>16</tileOut>
+      </tilesOut>
+    </tile>
+    <tile id="11" x="345" y="810">
+      <type>Mine</type>
+      <tilesOut>
+        <tileOut>12</tileOut>
+      </tilesOut>
+    </tile>
+    <tile id="12" x="225" y="810">
+      <type>Mine</type>
+      <tilesOut>
+        <tileOut>13</tileOut>
+      </tilesOut>
+    </tile>
+    <tile id="13" x="90" y="810">
+      <type>Boost</type>
+      <tilesOut>
+        <tileOut>14</tileOut>
+      </tilesOut>
+    </tile>
+    <tile id="14" x="90" y="690">
+      <type>NegMine</type>
+      <tilesOut>
+        <tileOut>15</tileOut>
+      </tilesOut>
+    </tile>
+    <tile id="15" x="90" y="570">
+      <type>NegMine</type>
+      <tilesOut>
+        <tileOut>3</tileOut>
+      </tilesOut>
+    </tile>
+    <tile id="16" x="585" y="808.05">
+      <type>Buff</type>
+      <tilesOut>
+        <tileOut>17</tileOut>
+      </tilesOut>
+    </tile>
+    <tile id="17" x="705" y="808.05">
+      <type>NegMine</type>
+      <tilesOut>
+        <tileOut>18</tileOut>
+      </tilesOut>
+    </tile>
+    <tile id="18" x="825" y="808.05">
+      <type>Mine</type>
+      <tilesOut>
+        <tileOut>19</tileOut>
+      </tilesOut>
+    </tile>
+    <tile id="19" x="945" y="808.05">
+      <type>Base</type>
+      <tilesOut>
+        <tileOut>20</tileOut>
+      </tilesOut>
+      <startPlayer>1</startPlayer>
+    </tile>
+    <tile id="20" x="945" y="703.05">
+      <type>Mine</type>
+      <tilesOut>
+        <tileOut>21</tileOut>
+      </tilesOut>
+    </tile>
+    <tile id="21" x="945" y="583.05">
+      <type>Mine</type>
+      <tilesOut>
+        <tileOut>22</tileOut>
+      </tilesOut>
+    </tile>
+    <tile id="22" x="945" y="418.05">
+      <type>NegMine</type>
+      <tilesOut>
+        <tileOut>23</tileOut>
+      </tilesOut>
+    </tile>
+    <tile id="23" x="780" y="373.05">
+      <type>Buff</type>
+      <tilesOut>
+        <tileOut>24</tileOut>
+      </tilesOut>
+    </tile>
+    <tile id="24" x="630" y="373.05">
+      <type>Mine</type>
+      <tilesOut>
+        <tileOut>6</tileOut>
+      </tilesOut>
+    </tile>
+    <tile id="25" x="465" y="268.05">
+      <type>Boost</type>
+      <tilesOut>
+        <tileOut>26</tileOut>
+      </tilesOut>
+    </tile>
+    <tile id="26" x="465" y="163.05">
+      <type>Healing</type>
+      <tilesOut>
+        <tileOut>27</tileOut>
+      </tilesOut>
+    </tile>
+    <tile id="27" x="465" y="73.05">
+      <type>Buff</type>
+      <tilesOut>
+        <tileOut>29</tileOut>
+        <tileOut>30</tileOut>
+      </tilesOut>
+    </tile>
+    <tile id="28" x="195" y="73.05">
+      <type>NegMine</type>
+      <tilesOut>
+        <tileOut>0</tileOut>
+      </tilesOut>
+    </tile>
+    <tile id="29" x="330" y="73.05">
+      <type>NegMine</type>
+      <tilesOut>
+        <tileOut>28</tileOut>
+      </tilesOut>
+    </tile>
+    <tile id="30" x="615" y="73.05">
+      <type>Mine</type>
+      <tilesOut>
+        <tileOut>31</tileOut>
+      </tilesOut>
+    </tile>
+    <tile id="31" x="765" y="73.05">
+      <type>Mine</type>
+      <tilesOut>
+        <tileOut>32</tileOut>
+      </tilesOut>
+    </tile>
+    <tile id="32" x="915" y="73.05">
+      <type>Node</type>
+      <tilesOut>
+        <tileOut>33</tileOut>
+      </tilesOut>
+    </tile>
+    <tile id="33" x="915" y="223.05">
+      <type>Mine</type>
+      <tilesOut>
+        <tileOut>22</tileOut>
+      </tilesOut>
+    </tile>
+  </boardTiles>
+  <embellishments>
+    <embellishment x="645" y="433.05">TallTree</embellishment>
+    <embellishment x="810" y="658.05">TallTree</embellishment>
+    <embellishment x="270" y="748.05">TallTree</embellishment>
+    <embellishment x="135" y="448.05">TallTree</embellishment>
+    <embellishment x="330" y="133.05">TallTree</embellishment>
+    <embellishment x="735" y="148.05">TallTree</embellishment>
+    <embellishment x="885" y="328.05">TallTree</embellishment>
+    <embellishment x="540" y="613.05">TallTree</embellishment>
+  </embellishments>
+</board>

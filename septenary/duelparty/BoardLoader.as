@@ -8,7 +8,7 @@ import flash.events.Event;
 	
 	public class BoardLoader extends EventDispatcher {
 		
-		public static const BOARD_LOAD_URL:String = "../resources/boards/";
+		public static const BOARD_LOAD_URL:String = "boards/";
 		public static const TILE_CLASS_PREFIX:String = "septenary.duelparty.boardtiles.";
 
         protected static var activeBoardLoader:BoardLoader;
@@ -26,7 +26,7 @@ import flash.events.Event;
 		}
 
         public function BoardLoader() {
-            if (activeBoardLoader) Utilities.assert(false, "Double instantiation of singleton BoardLoader.");
+            Utilities.assert(activeBoardLoader == null, "Double instantiation of singleton BoardLoader.");
         }
 		
 		public function loadBoard(boardDef:String):void {
@@ -84,7 +84,8 @@ import flash.events.Event;
 		
 			//Create new tile
 			var newBoardTile:BoardTile = Utilities.classInstanceFromString(TILE_CLASS_PREFIX + tileType + "Tile");
-			
+			newBoardTile.setDisplay(tileType);
+
 			//Start tile?
 			if (boardTile["startPlayer"]) {
 				envVars.startPositions[parseInt(boardTile["startPlayer"])] = newBoardTile;

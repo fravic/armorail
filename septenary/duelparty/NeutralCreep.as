@@ -3,10 +3,14 @@ package septenary.duelparty {
 
     public class NeutralCreep extends Fighter implements Fightmaster {
 
+        protected var _bountyPayable:Object = null;
+
         public function NeutralCreep() {
             super();
             _counter = 3;
             _health = 5;
+
+            _attackBehaviour = BattleBehaviours.mortarAttackBehaviour;
             
             _movement.addEventListener(GameEvent.MOVEMENT_ARRIVED_AT_TILE, arrivedAtTile, false, 0, true);
             _movement.addEventListener(GameEvent.MOVEMENT_DEPARTED_TILE, departedTile, false, 0, true);
@@ -29,12 +33,14 @@ package septenary.duelparty {
         }
 
         public override function kill():void {
+            _bountyPayable = {coins:_bountyCoins, creepKills:1};
+
             super.kill();
             _movement.kill();
 		}
 
         public function payoutBounty():Object {
-            return {coins:_bountyCoins, creepKills:1};
+            return _bountyPayable;
         }
 
         public function teleportToTile(tile:BoardTile) {

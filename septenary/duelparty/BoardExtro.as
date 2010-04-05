@@ -7,7 +7,7 @@ package septenary.duelparty {
         protected var _local:Player;
         protected var _statsForPlayers:Dictionary;
 
-        public function BoardExtro(local:Player, players:Array) {
+        public function BoardExtro(local:Player, players:Array, victory:Boolean) {
             const boxTopY:Number = 200;
             const boxSpacing:Number = 200;
 
@@ -33,6 +33,7 @@ package septenary.duelparty {
         protected function endStatsBoxForPlayer(player:Player, placement:int):EndStatsBox {
             var newBox:EndStatsBox = new EndStatsBox();
 
+            newBox.lblPlayerName.text = player.playerData.name;
             newBox.lblTotalCoins.text = player.gameStats.totalCoins;
             newBox.lblPlayerKills.text = player.gameStats.playerKills;
             newBox.lblFighterKills.text = player.gameStats.fighterKills;

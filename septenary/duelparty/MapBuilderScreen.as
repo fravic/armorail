@@ -148,12 +148,13 @@ package septenary.duelparty {
         protected function addNewTile(e:GameEvent):void {
             var tileName:String = e.data.tileName;
 
-			var newTile:BoardTile = Utilities.classInstanceFromString(BoardLoader.TILE_CLASS_PREFIX + tileName);
-            newTile.x = _cursor.x;
-            newTile.y = _cursor.y;
+			var tile:BoardTile = Utilities.classInstanceFromString(BoardLoader.TILE_CLASS_PREFIX + tileName + "Tile");
+            tile.setDisplay(tileName);
+            tile.x = _cursor.x;
+            tile.y = _cursor.y;
 
-            connectTileToSelected(newTile);
-            addBoardTile(newTile);
+            connectTileToSelected(tile);
+            addBoardTile(tile);
         }
 
         protected function addNewEmb(e:GameEvent):void {
@@ -471,13 +472,14 @@ package septenary.duelparty {
 
         protected function setBackground(bg:String):void {
             if (_background) {
-                _contentArea.removeChild(_background);
+                this.removeChild(_background);
             }
 
             try {
                 _background = Utilities.classInstanceFromString(bg + "Background");
-                _contentArea.addChildAt(_background, 0);
+                this.addChildAt(_background, 0);
                 _backgroundName = bg;
+               // trace("ADDED BG", _contentArea.getChildIndex(_tileConnections), _contentArea.getChildIndex(_background));
             } catch(e:Error) {
                 showDialogBox(DialogBox.DIALOG_ONLY, {speaker:"Map Builder",
                                 dialog:"'"+bg+"' is an invalid background file!"}, null);
@@ -527,6 +529,7 @@ package septenary.duelparty {
 
         public override function gainedFocus():void {
             super.gainedFocus();
+            FocusManager.getManager().disablePlayerInput(this);
 			KeyActions.addArrowKeyListeners(cursorMove);
             KeyActions.addArrowKeyListeners(cursorMove, false);
             KeyActions.addEventListener(Keyboard.SPACE, cursorClick);
@@ -535,12 +538,13 @@ package septenary.duelparty {
         }
 
         public override function lostFocus():void {
-            super.lostFocus();
-			KeyActions.removeArrowKeyListeners();
+            KeyActions.removeArrowKeyListeners();
             KeyActions.removeArrowKeyListeners(false);
             KeyActions.removeEventListener(Keyboard.SPACE);
             KeyActions.removeEventListener(90);
             KeyActions.removeEventListener(88);
-        }
+            FocusManager.getManager().enablePlayerInput(this);
+            super.lostFocus();
+	    }
     }
 }

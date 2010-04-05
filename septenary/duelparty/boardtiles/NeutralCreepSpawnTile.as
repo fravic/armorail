@@ -12,7 +12,9 @@ package septenary.duelparty.boardtiles {
             _reducesMoveCount = false;
             _nextCreepSpawn = Math.round(Math.random() * CREEP_SPAWN_INTERVAL);
 
-            GameBoard.getGameBoard().addEventListener(GameEvent.START_TURN, attemptSpawnNewCreep);
+            if (GameBoard.getGameBoard()) {     //HACK: Game board doesn't exist in map builder
+                GameBoard.getGameBoard().addEventListener(GameEvent.START_TURN, attemptSpawnNewCreep);
+            }
         }
 
         public override function activate(player:Player, onPass:Boolean=false):void {

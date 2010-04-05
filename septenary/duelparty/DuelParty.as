@@ -11,6 +11,8 @@ package septenary.duelparty {
 
 	public class DuelParty extends Sprite {
 
+        private static const CLASS_INCLUDES:ClassIncludes = new ClassIncludes();
+
         private static var activeGame:DuelParty;
 
 		public static const UPDATE_INTERVAL:int = 33;
@@ -43,7 +45,7 @@ package septenary.duelparty {
 			_updateTimer.start();
 
             addChild(new BlackTransition());
-			switchState(MainMenuScreen, {});			
+			switchState(MainMenuScreen, {});
 		}
 				
 		public function update(e:TimerEvent):void {

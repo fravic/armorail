@@ -30,7 +30,7 @@ package septenary.duelparty {
 		public function GameScreen(screenData:Object=null) {
 			GameScreen.activeScreen = this;
 
-			screenData.boardType = "default";
+			screenData.boardType = "Level1";
 			screenData.playerDatas = [new PlayerData("Dummy", "Player 1", NetScreen.PLAYER_INPUT, 0, 0xFF0000, 2),
                                       new PlayerData("Dummy", "Player 2", NetScreen.AI_INPUT, 1, 0x00FF00, 0)];
 			
