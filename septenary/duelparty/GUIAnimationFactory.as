@@ -16,6 +16,12 @@ package septenary.duelparty {
         public static const TELEPORT_OUT:String = "TeleportOut";
         public static const TELEPORT_IN:String = "TeleportIn";
 
+        protected static var _activeScreen:Screen;
+
+        public static function setActiveScreen(screen:Screen):void {
+            _activeScreen = screen;
+        }
+
         public static function createAnimation(type:String, position:Point, data:Object, callback:Function):MovieClip {
             var anim:MovieClip = GUIAnimationFactory["create" + type](position, data);
             anim.x = position.x;
@@ -27,7 +33,7 @@ package septenary.duelparty {
         public static function createAndAddAnimation(type:String, position:Point, data:Object,
                                                      callback:Function):MovieClip {
             var anim:MovieClip = createAnimation(type, position, data, callback);
-            GameBoard.getGameBoard().addChildToOverlay(anim);
+            _activeScreen.addGUIAnimation(anim);
             return anim;
         }
 

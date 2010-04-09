@@ -4,6 +4,18 @@ package septenary.duelparty {
     public class NeutralCreep extends Fighter implements Fightmaster {
 
         protected var _bountyPayable:Object = null;
+        
+        protected var _display:Sprite3D;
+
+        public function setDisplay(value:Sprite3D):void {
+            if (_display != null) removeChild(_display);
+            _display = value;
+            addChild(_display);
+        }
+
+        public function getDisplay():Sprite3D {
+            return _display;
+        }
 
         public function NeutralCreep() {
             super();

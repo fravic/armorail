@@ -29,10 +29,11 @@ package septenary.duelparty {
 		
 		public function GameScreen(screenData:Object=null) {
 			GameScreen.activeScreen = this;
+            GUIAnimationFactory.setActiveScreen(this);
 
-			screenData.boardType = "Level1";
-			screenData.playerDatas = [new PlayerData("Dummy", "Player 1", NetScreen.PLAYER_INPUT, 0, 0xFF0000, 2),
-                                      new PlayerData("Dummy", "Player 2", NetScreen.AI_INPUT, 1, 0x00FF00, 0)];
+			screenData.boardType = "default";
+			screenData.playerDatas = [new PlayerData("DummyPlayer", "Player 1", NetScreen.PLAYER_INPUT, 0, 0xFF0000, 2),
+                                      new PlayerData("DummyPlayer", "Player 2", NetScreen.AI_INPUT, 1, 0x00FF00, 0)];
 			
 			//Initialize game board
 			_gameBoard = new GameBoard(this);
@@ -67,11 +68,9 @@ package septenary.duelparty {
             }
         }
 
-        public function darken():void {
-            const fadeDuration:Number = 1;
-
+        public function darken(alpha:Number=0.5, fadeDuration:Number=1):void {
             _darkOverlay = new Sprite();
-            _darkOverlay.graphics.beginFill(0x0, 0.5);
+            _darkOverlay.graphics.beginFill(0x0, alpha);
             _darkOverlay.graphics.drawRect(0, 0, DuelParty.stageWidth, DuelParty.stageHeight);
             _darkOverlay.alpha = 0;
             addChildAt(_darkOverlay, getChildIndex(_gameBoard) + 1);
@@ -181,6 +180,10 @@ package septenary.duelparty {
             _snapCoordinates.splice(_superScreens.indexOf(screen), 1);
             _superScreenIsSnapped.splice(_superScreens.indexOf(screen), 1);
             super.dismissSuperScreen(screen);
+        }
+
+        public override function addGUIAnimation(anim:Sprite):void {
+            _gameBoard.addChildToOverlay(anim);
         }
 		
 		public override function gainedFocus():void {

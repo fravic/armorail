@@ -26,6 +26,7 @@ package septenary.duelparty {
             }
 
             GameScreen.getGameScreen().darken();
+            GameInterface.getGameInterface().hidePlayerInterfaces();
 
             super();
         }
@@ -51,6 +52,7 @@ package septenary.duelparty {
 
         protected function closeExtro():void {
             GameScreen.getGameScreen().unDarken();
+            GameInterface.getGameInterface().showPlayerInterfaces();
         }
     }
 }

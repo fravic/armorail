@@ -1,5 +1,6 @@
 package septenary.duelparty {
     import flash.display.MovieClip;
+    import flash.geom.Point;
 
     public class Sprite3D extends MovieClip {
 
@@ -11,9 +12,10 @@ package septenary.duelparty {
             gotoAndStop(rotFrame);
             _rotation = value;
         }
-
-        public override function get rotation():Number {
-            return _rotation;
+        
+        public function set position(value:Point):void {
+            x = value.x;
+            y = value.y;
         }
 
         public function Sprite3D() {

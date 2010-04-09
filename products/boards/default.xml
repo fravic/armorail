@@ -8,10 +8,11 @@
       <startPlayer>0</startPlayer>
     </tile>
     <tile id="1" x="195" y="315">
-      <type>PassSwap</type>
+      <type>Base</type>
       <tilesOut>
         <tileOut>2</tileOut>
       </tilesOut>
+      <startPlayer>1</startPlayer>
     </tile>
     <tile id="2" x="195" y="510">
       <type>Mine</type>
@@ -57,11 +58,10 @@
       </tilesOut>
     </tile>
     <tile id="9" x="720" y="720">
-      <type>Base</type>
+      <type>Mine</type>
       <tilesOut>
         <tileOut>10</tileOut>
       </tilesOut>
-      <startPlayer>1</startPlayer>
     </tile>
     <tile id="10" x="915" y="510">
       <type>Mine</type>
