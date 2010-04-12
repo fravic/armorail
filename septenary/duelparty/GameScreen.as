@@ -32,8 +32,8 @@ package septenary.duelparty {
             GUIAnimationFactory.setActiveScreen(this);
 
 			screenData.boardType = "default";
-			screenData.playerDatas = [new PlayerData("DummyPlayer", "Player 1", NetScreen.PLAYER_INPUT, 0, 0xFF0000, 2),
-                                      new PlayerData("DummyPlayer", "Player 2", NetScreen.AI_INPUT, 1, 0x00FF00, 0)];
+			screenData.playerDatas = [new PlayerData("PlayerBlue", "Player 1", NetScreen.PLAYER_INPUT, 0, 0xFF0000, 2),
+                                      new PlayerData("PlayerOrange", "Player 2", NetScreen.AI_INPUT, 1, 0x00FF00, 0)];
 			
 			//Initialize game board
 			_gameBoard = new GameBoard(this);
@@ -182,7 +182,7 @@ package septenary.duelparty {
             super.dismissSuperScreen(screen);
         }
 
-        public override function addGUIAnimation(anim:Sprite):void {
+        public override function addGUIAnimation(anim:Sprite, data:Object):void {
             _gameBoard.addChildToOverlay(anim);
         }
 		

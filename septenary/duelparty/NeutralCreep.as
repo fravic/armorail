@@ -1,5 +1,6 @@
 package septenary.duelparty {
     import flash.geom.Point;
+    import flash.display.Sprite;
 
     public class NeutralCreep extends Fighter implements Fightmaster {
 
@@ -13,7 +14,7 @@ package septenary.duelparty {
             addChild(_display);
         }
 
-        public function getDisplay():Sprite3D {
+        public function getDisplay():Sprite {
             return _display;
         }
 

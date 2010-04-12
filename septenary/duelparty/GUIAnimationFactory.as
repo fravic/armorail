@@ -23,9 +23,12 @@ package septenary.duelparty {
         }
 
         public static function createAnimation(type:String, position:Point, data:Object, callback:Function):MovieClip {
-            var anim:MovieClip = GUIAnimationFactory["create" + type](position, data);
-            anim.x = position.x;
-            anim.y = position.y;
+            //Ask screen if it wants to modify the animation's position
+            var newPos:Point = _activeScreen.positionForGUIAnimation(position, data);
+
+            var anim:MovieClip = GUIAnimationFactory["create" + type](newPos, data);
+            anim.x = newPos.x;
+            anim.y = newPos.y;
             if (callback != null) GameEvent.addOneTimeEventListener(anim, GameEvent.ACTION_COMPLETE, callback);
             return anim;
         }
@@ -33,7 +36,7 @@ package septenary.duelparty {
         public static function createAndAddAnimation(type:String, position:Point, data:Object,
                                                      callback:Function):MovieClip {
             var anim:MovieClip = createAnimation(type, position, data, callback);
-            _activeScreen.addGUIAnimation(anim);
+            _activeScreen.addGUIAnimation(anim, data);
             return anim;
         }
 

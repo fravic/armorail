@@ -1,7 +1,8 @@
 package septenary.duelparty {
+    import flash.display.Sprite;
 
     public interface Fightmaster {
-        function getDisplay():Sprite3D;
+        function getDisplay():Sprite;
         
         function getForeGuard():Fighter;
         function getRearGuard():Fighter;

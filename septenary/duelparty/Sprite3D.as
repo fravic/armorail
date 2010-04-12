@@ -12,6 +12,10 @@ package septenary.duelparty {
             gotoAndStop(rotFrame);
             _rotation = value;
         }
+
+        public override function get rotation():Number {
+            return _rotation;
+        }
         
         public function set position(value:Point):void {
             x = value.x;
@@ -21,6 +25,7 @@ package septenary.duelparty {
         public function Sprite3D() {
             super();
             this.rotation = 0;
+            this.cacheAsBitmap = true;
         }
     }
 }
