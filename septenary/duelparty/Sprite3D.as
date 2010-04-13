@@ -1,6 +1,7 @@
 package septenary.duelparty {
     import flash.display.MovieClip;
     import flash.geom.Point;
+    import flash.events.Event;
 
     public class Sprite3D extends MovieClip {
 

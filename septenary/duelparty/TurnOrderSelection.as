@@ -30,7 +30,7 @@ package septenary.duelparty {
         }
 
         protected function addPlayerSprites():void {
-            const playerSidePostfix:String = "Side";
+            const playerSidePostfix:String = "Front";
             const playerY:Number = 350;
             const playerXSpacing:Number = 100;
 
