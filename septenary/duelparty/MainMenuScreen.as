@@ -1,56 +1,48 @@
 package septenary.duelparty {
-    import flash.events.MouseEvent;
 
     public class MainMenuScreen extends Screen {
-
-        private static const PLAY:String = "Play";
-        private static const CAMPAIGN:String = "Campaign";
-        private static const SINGLE_MATCH:String = "Single Match";
-        private static const ONLINE_MULTIPLAYER:String = "Online Multiplayer";
 
         protected static const _activeButtons:Array = new Array();
 
         public function MainMenuScreen(screenData:Object=null) {
             super();
-
-            var menuButtons:Array = [PLAY, CAMPAIGN, SINGLE_MATCH, ONLINE_MULTIPLAYER];
-            for (var i:int = 0; i < menuButtons.length; i++) {
-                addButton(menuButtons[i]);    
-            }
+            openLoginScreen();
         }
 
-        protected function addButton(text:String):void {
-            const buttonSpacing:Number = 30;
-            const buttonX:Number = 400;
-
-            var newBtn:OptionButtonSmall = new OptionButtonSmall();
-            newBtn.lbl.text = newBtn.data = text;
-
-            newBtn.x = buttonX;
-            newBtn.y = (_activeButtons.length + 1) * buttonSpacing;
-            addChild(newBtn);
-
-            _activeButtons.push(newBtn);
+        protected function openLoginScreen():void {
+            var loginScreen:MultiplayerLoginScreen = new MultiplayerLoginScreen();
+            GameEvent.addOneTimeEventListener(loginScreen, GameEvent.ACTION_COMPLETE, loginComplete);
+            pushSuperScreen(loginScreen);
         }
 
-        protected function buttonAction(e:MouseEvent):void {
-            if (e.target.data == PLAY) {
-                DuelParty.getGame().switchState(GameScreen, {});
-            } else if (e.target.data == CAMPAIGN) {
-                DuelParty.getGame().switchState(CampaignScreen, {});
-            } else if (e.target.data == SINGLE_MATCH) {
-            } else if (e.target.data == ONLINE_MULTIPLAYER) {
+        protected function goToGameScreen(gameData:Object):void {
+            DuelParty.getGame().switchState(GameScreen, gameData);
+        }
+
+        protected function loginComplete(e:GameEvent):void {
+            dismissSuperScreen(e.target as Screen);
+
+            var lobbyScreen:MultiplayerLobbyScreen = new MultiplayerLobbyScreen();
+            GameEvent.addOneTimeEventListener(lobbyScreen, GameEvent.ACTION_COMPLETE, lobbyComplete);
+            pushSuperScreen(lobbyScreen);
+        }
+
+        protected function lobbyComplete(e:GameEvent):void {
+            dismissSuperScreen(e.target as Screen);
+
+            if (e.data.action == MultiplayerLobbyScreen.LOGOUT) {
+                openLoginScreen();
+            } else if (e.data.action == MultiplayerLobbyScreen.START_GAME) {
+                goToGameScreen(e.data.gameData);
             }
         }
 
         public override function gainedFocus():void {
             super.gainedFocus();
-            FocusManager.getManager().addGeneralFocusableListener(this, buttonAction);
         }
 
         public override function lostFocus():void {
             super.lostFocus();
-            FocusManager.getManager().removeGeneralFocusableListener(this, buttonAction);
         }
     }
 }

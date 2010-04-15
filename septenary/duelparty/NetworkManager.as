@@ -1,98 +1,1 @@
-package septenary.duelparty {
-	import flash.events.Event;
-	import flash.events.IOErrorEvent;
-	import flash.net.URLLoader;
-	import flash.net.URLRequest;
-	import flash.net.URLRequestMethod;
-    import flash.utils.ByteArray;
-    import com.hurlant.crypto.Crypto;
-	import com.hurlant.crypto.prng.Random;
-    import com.hurlant.crypto.symmetric.*;
-    import com.hurlant.util.*;
-
-	public class NetworkManager {
-		
-		protected static const GAME_RECIEVE_URL:String = "http://www.anchat.com/duelparty/game/recv";
-		protected static const GAME_SEND_URL:String = "http://www.anchat.com/duelparty/game/send";
-		
-		protected static var activeManager:NetworkManager;
-		
-		protected var netListenerQueue:Array = new Array();
-		
-		public static function getNetworkManager():NetworkManager {
-            if (!activeManager) {
-                activeManager = new NetworkManager();
-            }
-			return activeManager;
-		}
-		
-		public function NetworkManager() {
-            if (activeManager) Utilities.assert(false, "Double instantiation of singleton NetworkManager.");
-		}
-		
-		public function startNetGame():void {
-			longPoll();
-		}
-		
-		public function pushNetData(netObject:Object):void {
-			var urlLoader = new URLLoader();
-			var urlRequest = new URLRequest(GAME_SEND_URL);
-			urlRequest.data = {dataType:netObject.dataType, data:netObject.data};
-			urlRequest.method = URLRequestMethod.GET;
-			
-			urlLoader.addEventListener(IOErrorEvent.IO_ERROR, netSendError, false, 0, true);
-			urlLoader.load(urlRequest);
-		}
-		
-		public function queueNetListener(listenFor:String, callback:Function):void {
-			netListenerQueue.push({listenFor:listenFor, callback:callback});	
-		}
-		
-		protected function longPoll():void {
-			var urlLoader = new URLLoader();
-			var urlRequest = new URLRequest(GAME_RECIEVE_URL);
-			
-			urlLoader.addEventListener(Event.COMPLETE, netDataReceived, false, 0, true);
-			urlLoader.addEventListener(IOErrorEvent.IO_ERROR, netRecieveError, false, 0, true);
-			urlLoader.load(urlRequest);
-		}
-		
-		protected function netDataReceived(e:Event):void {
-			var nextListener:Object = netListenerQueue[0];
-			var netObject:Object = decodeNetData(e.target.data);
-			if (nextListener.listenFor == netObject.dataType) {
-				nextListener.callback(netObject);
-			}
-			
-			longPoll();
-		}
-		
-		protected function decodeNetData(data:String):Object {
-			var netObject = new Object();
-			return {dataType:netObject.dataType, data:netObject.data};
-		}
-		
-		protected function netRecieveError(e:IOErrorEvent):void {
-		}
-		
-		protected function netSendError(e:IOErrorEvent):void {
-		}
-
-        function getAESKey():String {
-            var r:Random = new Random;
-            var pk:ByteArray = Hex.toArray("12345678901234567890");
-            return Base64.encodeByteArray(pk);
-        }
-
-        function encrypt(input:String, key:String, algorithm:String =
-                  "aes-128-ecb", padding:String = "None"):String {
-            var kdata:ByteArray = Base64.decodeToByteArray(key);
-            var data:ByteArray = Hex.toArray(Hex.fromString(input));
-            var pad:IPad = padding == "pkcs5" ? new PKCS5 : new NullPad;
-            var mode:ICipher = Crypto.getCipher(algorithm, kdata, pad);
-            pad.setBlockSize (mode.getBlockSize());
-            mode.encrypt (data);
-            return Base64.encodeByteArray(data);
-        }
-	}
-}
+package septenary.duelparty {    import flash.events.EventDispatcher;	import playerio.*;	public class NetworkManager extends EventDispatcher {        private static const GUEST_ACCOUNT_ID:String = "guest";        private static const SERVER_TYPE:String = "bounce";        private static const ROOM_LIST_LIMIT:int = 50;		protected static var activeManager:NetworkManager;        protected var _activeConnection:Connection;        protected var _activeClient:Client;        CONFIG::RELEASE {            protected static const PLAYER_IO_GAME_ID:String = "armorail-yvvzcnzuue6on0gb458tgq";        }        CONFIG::DEBUG {            protected static const PLAYER_IO_GAME_ID:String = "armorail-staging-gd2zgihntugoxgb985fdlq";        }		public static function getNetworkManager():NetworkManager {            if (!activeManager) {                activeManager = new NetworkManager();            }			return activeManager;		}				public function NetworkManager() {            if (activeManager) Utilities.assert(false, "Double instantiation of singleton NetworkManager.");            //Register message types            NetworkMessage.registerMessageTypeArgs(NetworkMessage.JOIN, {numUsers:int, playerNetID:String});            NetworkMessage.registerMessageTypeArgs(NetworkMessage.DICE_ROLL, {playerNetID:String, roll:int});            NetworkMessage.registerMessageTypeArgs(NetworkMessage.DIR_SELECT, {playerNetID:String, dir:int});		}        /* LOGIN/ACCOUNT MANAGEMENT */        protected function login(userID:String, authKey:String=""):void {            PlayerIO.connect(				DuelParty.stage,				PLAYER_IO_GAME_ID,				"public",				userID,				authKey,				handleConnect,				handleConnectError				    			);        }                public function loginToFacebook(username:String, password:String):void {        }        public function loginAsGuest():void {            login(GUEST_ACCOUNT_ID);        }        protected function handleConnect(client:Client):void {            _activeClient = client;            trace("PLAYER.IO CONNECTED SUCCESSFULLY!");            dispatchEvent(new GameEvent(GameEvent.ACTION_COMPLETE, {success:true}));        }        protected function handleConnectError(error:PlayerIOError):void {            trace("PLAYER.IO ERROR: "+error);            dispatchEvent(new GameEvent(GameEvent.ACTION_COMPLETE, {success:true}));        }        /* ROOM MANAGEMENT */        protected function initConnection(connection:Connection):void {            Utilities.assert(_activeConnection == null, "A connection has already been initialized!");            _activeConnection = connection;            _activeConnection.addMessageHandler("*", handleMessages);        }        public function createRoom(numUsers:int):void {            Utilities.assert(_activeClient != null, "Cannot create room on inactive client!");            _activeClient.multiplayer.createJoinRoom(				"test",				SERVER_TYPE,				true,				{numUsers:numUsers},                {},				handleRoomCreate,				handleRoomCreateError								);        }        protected function handleRoomCreate(connection:Connection):void {            initConnection(connection);        }        protected function handleRoomCreateError(error:PlayerIOError):void {        }        public function joinRoom(roomInfo:RoomInfo):void {            Utilities.assert(_activeClient != null, "Cannot join room on inactive client!");            _activeClient.multiplayer.createJoinRoom(				"test",				SERVER_TYPE,				true,				{},                {},				handleRoomJoin,				handleRoomJoinError			);        }        protected function handleRoomJoin(connection:Connection):void {            initConnection(connection);        }        protected function handleRoomJoinError(error:PlayerIOError):void {        }        public function pollRooms(type:String):void {            _activeClient.multiplayer.listRooms(type, {}, ROOM_LIST_LIMIT, 0, roomPollComplete, handleConnectError);        }        public function roomPollComplete(rooms:Array):void {            dispatchEvent(new GameEvent(GameEvent.ACTION_COMPLETE, {rooms:rooms}));        }        /* MESSAGE MANAGEMENT */        public function sendMessage(type:String, data:Object):void {			Utilities.assert(_activeConnection != null, "Cannot send message to an inactive connection!");            var message:NetworkMessage = new NetworkMessage(type, data);            var argsArray:Array = [type].concat(message.serializedData);            _activeConnection.send.apply(_activeConnection, argsArray);        }        protected function handleMessages(m:Message){			trace("PLAYER.IO RECIEVED MESSAGE:", m);            var netMessage:NetworkMessage = new NetworkMessage(m.type);            netMessage.deserializeMessage(m);            dispatchEvent(new GameEvent(GameEvent.NETWORK_MESSAGE, {type:m.type, netData:netMessage.data,                                                                    messageSource:m}));		}		protected function handleDisconnect():void{		}	}}

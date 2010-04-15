@@ -104,5 +104,9 @@ package septenary.duelparty {
             if (_player == null) return FocusManager.getManager();
             return FocusManager.getManagerByID(_player.playerData.netID);
         }
+
+        public function hasPlayerFocus():Boolean {
+            return _player.playerData.inputSource == PLAYER_INPUT;
+        }
 	}
 }
