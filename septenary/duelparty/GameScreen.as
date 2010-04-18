@@ -30,11 +30,6 @@ package septenary.duelparty {
 		public function GameScreen(screenData:Object=null) {
 			GameScreen.activeScreen = this;
             GUIAnimationFactory.setActiveScreen(this);
-
-            if (screenData == null) screenData = new Object();
-			screenData.boardType = "default";
-			screenData.playerDatas = [new PlayerData("PlayerBlue", "Player 1", NetScreen.PLAYER_INPUT, 0, 0xFF0000, 2),
-                                      new PlayerData("PlayerOrange", "Player 2", NetScreen.AI_INPUT, 1, 0x00FF00, 0)];
 			
 			//Initialize game board
 			_gameBoard = new GameBoard(this);

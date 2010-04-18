@@ -8,23 +8,31 @@ package septenary.duelparty {
 
         //Message types defined by Player.IO
         public static const JOIN:String = "Join";
+        public static const LEFT:String = "Left";
 
         //Game-specific message types
+        public static const PLAYER_DATA:String = "PlayerData";
         public static const DICE_ROLL:String = "DiceRoll";
+        public static const DIALOG_BOX:String = "DialogBox";
         public static const DIR_SELECT:String = "DirSelect";
 
         private static var _typeArgsDictionary:Dictionary = new Dictionary();
 
+        protected var _type:String;
         protected var _data:Object;
         protected var _serializedData:Array;
 
-        public static function registerMessageTypeArgs(type:String, args:Object):void {
+        public static function registerMessageTypeArgs(type:String, args:Array):void {
             if (_typeArgsDictionary[type] == null) _typeArgsDictionary[type] = new Object();
-            var i:int = 0;
-            for (var s:String in args) {
-                _typeArgsDictionary[type][s] = {index:i, type:args[s]};
-                i++;
+            for (var i:int = 0; i < args.length; i++) {
+                for (var s:String in args[i]) {
+                    _typeArgsDictionary[type][s] = {index:i, type:args[i][s]};
+                }
             }
+        }
+
+        public function get type():String {
+            return _type;
         }
 
         public function get data():Object {
@@ -38,6 +46,7 @@ package septenary.duelparty {
         public function NetworkMessage(type:String, data:Object=null) {
             Utilities.assert(_typeArgsDictionary[type] != null, 
                             "Types have not been registered for network message type '"+type+"'!");
+            _type = type;
 
             if (data != null) {
                 serializeMessage(type, data);
@@ -48,7 +57,12 @@ package septenary.duelparty {
             _data = data;
             _serializedData = new Array();
 
-            for (var s:String in _typeArgsDictionary[type]) {
+            for (var s:String in _data) {
+                Utilities.assert(_typeArgsDictionary[type][s] != null, 
+                                 "Unrecognized data entry in message type '"+type+"'!");
+            }
+
+            for (s in _typeArgsDictionary[type]) {
                 var index:int = _typeArgsDictionary[type][s].index;
 
                 if (data[s] != null) {

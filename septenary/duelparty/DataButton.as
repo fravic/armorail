@@ -14,7 +14,6 @@ package septenary.duelparty {
         public function DataButton(data:*=null) {
             super();
             _data = data;
-            buttonMode = true;
             mouseChildren = false;
         }
     }

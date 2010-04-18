@@ -1,15 +1,19 @@
 package septenary.duelparty {
 
 	public class PlayerData {
-		
+
+        protected var _playerNum:int;
 		protected var _display:String;
 		protected var _name:String;
 		protected var _inputSource:int;
-		protected var _netID:int;       // Note: NetID '0' is RESERVED for the local player!
+		protected var _netID:String;
 		protected var _color:int;
 		protected var _rank:int;
-		
-		public function get display():String {
+
+        public function get playerNum():int {
+            return _playerNum;
+        }
+        public function get display():String {
 			return _display;
 		}
 		public function get name():String {
@@ -18,7 +22,7 @@ package septenary.duelparty {
 		public function get inputSource():int {
 			return _inputSource;
 		}
-		public function get netID():int {
+		public function get netID():String {
 			return _netID;
 		}
 		public function get color():int {
@@ -28,18 +32,15 @@ package septenary.duelparty {
 			return _rank;
 		}
 		
-		public function PlayerData(display:String, name:String, inputSource:int, netID:int, color:int, rank:int) {
+		public function PlayerData(num:int, display:String, name:String, inputSource:int, netID:String, color:int,
+                                   rank:int) {
+            _playerNum = num;
 			_display = display;
 			_name = name;
 			_inputSource = inputSource;
 			_netID = netID;
 			_color = color;
 			_rank = rank;
-
-            Utilities.assert(!(_netID == 0 && _inputSource != NetScreen.PLAYER_INPUT),
-                             "NetID '0' is RESERVED for the local player!");
-            Utilities.assert(!(_netID != 0 && _inputSource == NetScreen.PLAYER_INPUT),
-                             "The local player MUST have a NetID of 0!");
 		}
 
 	}
