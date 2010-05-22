@@ -16,140 +16,11 @@
   </component>
   <component name="ChangeListManager" verified="true">
     <list default="true" readonly="true" id="ffb2a910-a95c-473c-8a69-f6ee1cb26018" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/tls/MACs.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/tests/BigIntegerTest.as" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/PlayerMovement.as" afterPath="$PROJECT_DIR$/septenary/duelparty/PlayerMovement.as" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/symmetric/DESKey.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/symmetric/IMode.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/tests/OFBModeTest.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/util/der/PEM.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/math/BarrettReduction.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/hash/SHA256.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/tests/SHA256Test.as" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/MainMenuScreen.as" afterPath="$PROJECT_DIR$/septenary/duelparty/MainMenuScreen.as" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/tls/TLSTest.as" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/BoardLoader.as" afterPath="$PROJECT_DIR$/septenary/duelparty/BoardLoader.as" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/math/BigInteger.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/symmetric/AESKey.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/tls/TLSError.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/tests/ITestHarness.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/cert/MozillaRootCertificates.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/hash/MD5.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/tests/ARC4Test.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/tls/TLSConfig.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/util/der/DER.as" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/FocusManager.as" afterPath="$PROJECT_DIR$/septenary/duelparty/FocusManager.as" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/symmetric/ECBMode.as" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/TurnOrderSelection.as" afterPath="$PROJECT_DIR$/septenary/duelparty/TurnOrderSelection.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/PlayerChoice.as" afterPath="$PROJECT_DIR$/septenary/duelparty/PlayerChoice.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/BoardTile.as" afterPath="$PROJECT_DIR$/septenary/duelparty/BoardTile.as" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/hash/IHash.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/symmetric/TLSPad.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/symmetric/IPad.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/tests/TLSPRFTest.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/symmetric/CBCMode.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/symmetric/IStreamCipher.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/hash/SHABase.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/tests/DESKeyTest.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/tls/BulkCiphers.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/cert/X509CertificateCollection.as" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/boardtiles/BuffTile.as" afterPath="$PROJECT_DIR$/septenary/duelparty/boardtiles/BuffTile.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/boardtiles/NeutralCreepSpawnTile.as" afterPath="$PROJECT_DIR$/septenary/duelparty/boardtiles/NeutralCreepSpawnTile.as" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/tests/MD5Test.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/math/bi_internal.as" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/boardtiles/HealingTile.as" afterPath="$PROJECT_DIR$/septenary/duelparty/boardtiles/HealingTile.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/BattleManager.as" afterPath="$PROJECT_DIR$/septenary/duelparty/BattleManager.as" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/symmetric/IVMode.as" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/MapBuilderScreen.as" afterPath="$PROJECT_DIR$/septenary/duelparty/MapBuilderScreen.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/NetworkManager.as" afterPath="$PROJECT_DIR$/septenary/duelparty/NetworkManager.as" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/tls/TLSSocket.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/util/der/ObjectIdentifier.as" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/MultiplayerLobbyScreen.as" afterPath="$PROJECT_DIR$/septenary/duelparty/MultiplayerLobbyScreen.as" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/prng/IPRNG.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/util/der/Integer.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/tests/CFBModeTest.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/symmetric/SimpleIVMode.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/util/der/IAsn1Type.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/tls/TLSSecurityParameters.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/util/der/Type.as" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/BoardIntro.as" afterPath="$PROJECT_DIR$/septenary/duelparty/BoardIntro.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/boardtiles/BoostTile.as" afterPath="$PROJECT_DIR$/septenary/duelparty/boardtiles/BoostTile.as" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/tls/TLSConnectionState.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/tests/XTeaKeyTest.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/tests/TripleDESKeyTest.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/util/der/Set.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/symmetric/XTeaKey.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/symmetric/CFBMode.as" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/FightableMovement.as" afterPath="$PROJECT_DIR$/septenary/duelparty/FightableMovement.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DuelParty.iml" afterPath="$PROJECT_DIR$/DuelParty.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/BattleScreen.as" afterPath="$PROJECT_DIR$/septenary/duelparty/BattleScreen.as" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/tls/CipherSuites.as" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/boardtiles/GateTile.as" afterPath="$PROJECT_DIR$/septenary/duelparty/boardtiles/GateTile.as" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/hash/MD2.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/tls/KeyExchanges.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/symmetric/NullPad.as" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/NeutralCreep.as" afterPath="$PROJECT_DIR$/septenary/duelparty/NeutralCreep.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/BlackTransition.as" afterPath="$PROJECT_DIR$/septenary/duelparty/BlackTransition.as" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/tests/ECBModeTest.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/symmetric/ISymmetricKey.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/prng/ARC4.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/tests/CTRModeTest.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/util/der/UTCTime.as" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/MultiplayerLoginScreen.as" afterPath="$PROJECT_DIR$/septenary/duelparty/MultiplayerLoginScreen.as" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/rsa/RSAKey.as" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/GameInterface.as" afterPath="$PROJECT_DIR$/septenary/duelparty/GameInterface.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/GameScreen.as" afterPath="$PROJECT_DIR$/septenary/duelparty/GameScreen.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/boardtiles/RevolvingDoorTile.as" afterPath="$PROJECT_DIR$/septenary/duelparty/boardtiles/RevolvingDoorTile.as" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/util/der/Sequence.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/util/ArrayUtil.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/Crypto.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/tests/AESKeyTest.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/util/Hex.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/tls/TLSEngine.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/tests/HMACTest.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/math/MontgomeryReduction.as" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/DiceRoll.as" afterPath="$PROJECT_DIR$/septenary/duelparty/DiceRoll.as" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/symmetric/OFBMode.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/util/der/ByteString.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/tests/SHA224Test.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/util/Memory.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/math/ClassicReduction.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/symmetric/CTRMode.as" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/ProjectileBurstFactory.as" afterPath="$PROJECT_DIR$/septenary/duelparty/ProjectileBurstFactory.as" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/symmetric/CFB8Mode.as" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/Utilities.as" afterPath="$PROJECT_DIR$/septenary/duelparty/Utilities.as" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/util/der/PrintableString.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/util/Base64.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/cert/X509Certificate.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/tests/TestCase.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/symmetric/PKCS5.as" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/DuelParty.as" afterPath="$PROJECT_DIR$/septenary/duelparty/DuelParty.as" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/tls/TLSEvent.as" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/boardtiles/DamageTrapTile.as" afterPath="$PROJECT_DIR$/septenary/duelparty/boardtiles/DamageTrapTile.as" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/symmetric/BlowFishKey.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/tests/CFB8ModeTest.as" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/NetScreen.as" afterPath="$PROJECT_DIR$/septenary/duelparty/NetScreen.as" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/tests/SHA1Test.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/prng/TLSPRF.as" afterPath="" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/septenary/duelparty/Singleton.as" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/math/IReduction.as" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DuelParty.fla" afterPath="$PROJECT_DIR$/DuelParty.fla" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/Player.as" afterPath="$PROJECT_DIR$/septenary/duelparty/Player.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/GameBoard.as" afterPath="$PROJECT_DIR$/septenary/duelparty/GameBoard.as" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/tests/BlowFishKeyTest.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/hash/SHA224.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/hash/HMAC.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/hash/SHA1.as" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/DialogBox.as" afterPath="$PROJECT_DIR$/septenary/duelparty/DialogBox.as" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/tests/CBCModeTest.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/util/der/OID.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/prng/Random.as" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/BoardExtro.as" afterPath="$PROJECT_DIR$/septenary/duelparty/BoardExtro.as" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/tests/RSAKeyTest.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/math/NullReduction.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/tests/MD2Test.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/symmetric/ICipher.as" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/com/hurlant/crypto/symmetric/TripleDESKey.as" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/DiceRoll.as" afterPath="$PROJECT_DIR$/septenary/duelparty/DiceRoll.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GameDesignDocument.pdf" afterPath="$PROJECT_DIR$/GameDesignDocument.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/BattleManager.as" afterPath="$PROJECT_DIR$/septenary/duelparty/BattleManager.as" />
     </list>
     <ignored path=".idea/workspace.xml" />
     <ignored path="DuelParty.iws" />
@@ -209,24 +80,6 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="DuelParty.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/septenary/duelparty/DuelParty.as">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="48" selection-start="2204" selection-end="2204" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainMenuScreen.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/septenary/duelparty/MainMenuScreen.as">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="30" selection-start="276" selection-end="276" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="BattleScreen.as" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/septenary/duelparty/BattleScreen.as">
           <provider selected="true" editor-type-id="text-editor">
@@ -263,10 +116,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FocusableTextField.as" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="FocusableTextField.as" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/septenary/duelparty/FocusableTextField.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="8" selection-start="174" selection-end="174" vertical-scroll-proportion="0.11814346">
+            <state line="25" column="64" selection-start="809" selection-end="809" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DiceRoll.as" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/septenary/duelparty/DiceRoll.as">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="114" column="110" selection-start="3785" selection-end="3785" vertical-scroll-proportion="0.94545454">
               <folding />
             </state>
           </provider>
@@ -275,7 +137,16 @@
       <file leaf-file-name="BattleManager.as" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/septenary/duelparty/BattleManager.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="41" selection-start="2017" selection-end="2017" vertical-scroll-proportion="0.0">
+            <state line="27" column="52" selection-start="968" selection-end="968" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DuelParty.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/septenary/duelparty/DuelParty.as">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="60" selection-start="636" selection-end="636" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -324,22 +195,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/septenary/duelparty/NetScreen.as" />
         <option value="$PROJECT_DIR$/septenary/duelparty/Utilities.as" />
         <option value="$PROJECT_DIR$/septenary/duelparty/MultiplayerLobbyScreen.as" />
         <option value="$PROJECT_DIR$/septenary/duelparty/BlackTransition.as" />
         <option value="$PROJECT_DIR$/septenary/duelparty/BoardLoader.as" />
         <option value="$PROJECT_DIR$/septenary/duelparty/NetworkManager.as" />
         <option value="$PROJECT_DIR$/septenary/duelparty/DialogBox.as" />
-        <option value="$PROJECT_DIR$/septenary/duelparty/BattleManager.as" />
         <option value="$PROJECT_DIR$/septenary/duelparty/boardtiles/BuffTile.as" />
         <option value="$PROJECT_DIR$/septenary/duelparty/BattleScreen.as" />
-        <option value="$PROJECT_DIR$/septenary/duelparty/DuelParty.as" />
         <option value="$PROJECT_DIR$/septenary/duelparty/MainMenuScreen.as" />
         <option value="$PROJECT_DIR$/septenary/duelparty/Singleton.as" />
         <option value="$PROJECT_DIR$/septenary/duelparty/GameInterface.as" />
         <option value="$PROJECT_DIR$/septenary/duelparty/GameBoard.as" />
         <option value="$PROJECT_DIR$/septenary/duelparty/GameScreen.as" />
+        <option value="$PROJECT_DIR$/septenary/duelparty/BattleManager.as" />
+        <option value="$PROJECT_DIR$/septenary/duelparty/DuelParty.as" />
+        <option value="$PROJECT_DIR$/septenary/duelparty/DiceRoll.as" />
       </list>
     </option>
   </component>
@@ -483,6 +354,38 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="septenary" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Duel Party" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Duel Party" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="products" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Duel Party" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Duel Party" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="products" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="boards" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -797,10 +700,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1387" height="878" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298153" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32849604" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -810,12 +714,11 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32884902" sideWeight="0.3364116" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295964" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32884902" sideWeight="0.6622691" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32884902" sideWeight="0.6622691" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32849604" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298153" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -902,16 +805,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/septenary/duelparty/BoardLoader.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="33" selection-start="644" selection-end="644" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/septenary/duelparty/FocusManager.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="9" selection-start="828" selection-end="828" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/septenary/duelparty/NetworkManager.as">
       <provider selected="true" editor-type-id="text-editor">
         <state line="34" column="0" selection-start="1067" selection-end="1067" vertical-scroll-proportion="0.0" />
@@ -932,11 +825,6 @@
         <state line="11" column="57" selection-start="465" selection-end="465" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/septenary/duelparty/DuelParty.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="48" selection-start="2204" selection-end="2204" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/septenary/duelparty/MainMenuScreen.as">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="30" selection-start="276" selection-end="276" vertical-scroll-proportion="0.0" />
@@ -950,11 +838,6 @@
     <entry file="file://$PROJECT_DIR$/septenary/duelparty/GameInterface.as">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="0" selection-start="896" selection-end="896" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/septenary/duelparty/BattleManager.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="41" selection-start="2017" selection-end="2017" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/septenary/duelparty/boardtiles/BuffTile.as">
@@ -983,7 +866,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/septenary/duelparty/FocusableTextField.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="8" selection-start="174" selection-end="174" vertical-scroll-proportion="0.11814346">
+        <state line="25" column="64" selection-start="809" selection-end="809" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/products/boards/default.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="67" selection-start="635" selection-end="635" vertical-scroll-proportion="0.6593407">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/septenary/duelparty/BattleManager.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="52" selection-start="968" selection-end="968" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/septenary/duelparty/DuelParty.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="60" selection-start="636" selection-end="636" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/septenary/duelparty/DiceRoll.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="114" column="110" selection-start="3785" selection-end="3785" vertical-scroll-proportion="0.94545454">
           <folding />
         </state>
       </provider>
