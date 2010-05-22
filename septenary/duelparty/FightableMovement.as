@@ -22,7 +22,7 @@ package septenary.duelparty {
         public function FightableMovement(fightable:Sprite) {
             super(fightable);
 
-            GameBoard.getGameBoard().addEventListener(GameEvent.START_TURN, turnStartHandler, false, 0, true);
+            Singleton.get(GameBoard).addEventListener(GameEvent.START_TURN, turnStartHandler, false, 0, true);
         }
 
         public function kill():void {
@@ -165,10 +165,10 @@ package septenary.duelparty {
         }
 
         protected function newNeighbourHandler(e:GameEvent):void {
-            if (_display == GameBoard.getGameBoard().curTurnPlayer()) {
+            if (_display == Singleton.get(GameBoard).curTurnPlayer()) {
                 (e.data.fightable.movement as FightableMovement).moveTrainAside(true);
             } else {
-                moveTrainAside(e.data.fightable == GameBoard.getGameBoard().curTurnPlayer());
+                moveTrainAside(e.data.fightable == Singleton.get(GameBoard).curTurnPlayer());
             }
         }
 

@@ -11,22 +11,13 @@ import flash.events.Event;
 		public static const BOARD_LOAD_URL:String = "boards/";
 		public static const TILE_CLASS_PREFIX:String = "septenary.duelparty.boardtiles.";
 
-        protected static var activeBoardLoader:BoardLoader;
-
 		protected var _loadedBoards:Object = new Object();
 		protected var _loadingBoard:String;
 
 		protected var _boardOutConnections = new Array();
 
-        public static function getBoardLoader():BoardLoader {
-            if (!activeBoardLoader) {
-                activeBoardLoader = new BoardLoader();
-            }
-			return activeBoardLoader;
-		}
-
         public function BoardLoader() {
-            Utilities.assert(activeBoardLoader == null, "Double instantiation of singleton BoardLoader.");
+            Singleton.init(this);
         }
 		
 		public function loadBoard(boardDef:String):void {

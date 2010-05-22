@@ -18,7 +18,7 @@ package septenary.duelparty.boardtiles {
                 function dialogBoxDismissed(e:GameEvent):void {
                     activateDone(player);
                 }
-                GameInterface.getGameInterface().showDialogBox(DialogBox.DIALOG_ONLY,
+                Singleton.get(GameInterface).showDialogBox(DialogBox.DIALOG_ONLY,
                     {speaker:"Healing Tile", dialog:"This is a healing tile, but you are at maximum health!",
                      player:player}, 
                     dialogBoxDismissed);

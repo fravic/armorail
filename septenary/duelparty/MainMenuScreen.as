@@ -16,7 +16,7 @@ package septenary.duelparty {
         }
 
         protected function goToGameScreen(gameData:Object):void {
-            DuelParty.getGame().switchState(GameScreen, gameData);
+            Singleton.get(DuelParty).switchState(GameScreen, gameData);
         }
 
         protected function loginComplete(e:GameEvent):void {

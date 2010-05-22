@@ -1,0 +1,15 @@
+*.pdf
+!GameDesignDocument.pdf
+*.docx
+.DS_Store
+.Trash
+*.mobileprovision
+*.p12
+MoveTest.*
+PlayerIOTest.*
+RailsTest.*
+resources
+box2dtest
+server
+
+

@@ -12,8 +12,8 @@ package septenary.duelparty.boardtiles {
             _reducesMoveCount = false;
             _nextCreepSpawn = Math.round(Math.random() * CREEP_SPAWN_INTERVAL);
 
-            if (GameBoard.getGameBoard()) {     //HACK: Game board doesn't exist in map builder
-                GameBoard.getGameBoard().addEventListener(GameEvent.START_TURN, attemptSpawnNewCreep);
+            if (Singleton.get(GameBoard)) {     //HACK: Game board doesn't exist in map builder
+                Singleton.get(GameBoard).addEventListener(GameEvent.START_TURN, attemptSpawnNewCreep);
             }
         }
 
@@ -33,7 +33,7 @@ package septenary.duelparty.boardtiles {
         }
 
         protected function creepKilled(e:GameEvent):void {
-            GameBoard.getGameBoard().removeChildFromField(_neutralCreep);
+            Singleton.get(GameBoard).removeChildFromField(_neutralCreep);
             _neutralCreep = null;
             _nextCreepSpawn = CREEP_SPAWN_INTERVAL;
         }

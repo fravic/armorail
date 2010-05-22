@@ -8,12 +8,8 @@ package septenary.duelparty {
 
 	public class GameScreen extends Screen {
 		
-		protected static var activeScreen:GameScreen;
-		
 		protected const CAMERA_CENTER:Point = new Point(DuelParty.stageWidth/2, DuelParty.stageHeight/2);
 
-		protected var _gameBoard:GameBoard;
-		protected var _gameInterface:GameInterface;
 		protected var _boardDefs:Array = new Array();
         protected var _darkOverlay:Sprite;
 
@@ -23,27 +19,20 @@ package septenary.duelparty {
 		protected var _snapCoordinates:Array = new Array();
         protected var _superScreenIsSnapped:Array = new Array();
 
-		public static function getGameScreen():GameScreen {
-			return activeScreen;
-		}
-		
 		public function GameScreen(screenData:Object=null) {
-			GameScreen.activeScreen = this;
+            Singleton.init(this);
             GUIAnimationFactory.setActiveScreen(this);
 			
 			//Initialize game board
-			_gameBoard = new GameBoard(this);
-			_gameBoard.initBoard(screenData.boardType, screenData.playerDatas);
-			addChild(_gameBoard);
+			Singleton.get(GameBoard).initBoard(screenData.boardType, screenData.playerDatas);
+			addChild(Singleton.get(GameBoard));
 			
 			//Initialize game interface
-			_gameInterface = new GameInterface(this);
-			_gameInterface.initInterface(screenData.playerDatas);
-			pushSuperScreen(_gameInterface);
+			pushSuperScreen(Singleton.get(GameInterface));
 		}
 		
 		public override function update():void {
-			_gameBoard.update();
+			Singleton.get(GameBoard).update();
 			scrollCamera();
 			updateCamera();
 			updateSuperScreenSnaps();
@@ -56,10 +45,11 @@ package septenary.duelparty {
 
         public function setCameraZoom(targ:Number, instant:Boolean=false):void {
             _cameraZoom = keepTargetZoomInRange(
-                            keepTargetZoomInRange(targ, _gameBoard.width, DuelParty.stageWidth, _gameBoard.scaleX),
-                            _gameBoard.height, DuelParty.stageHeight, _gameBoard.scaleY);
+                            keepTargetZoomInRange(targ, Singleton.get(GameBoard).width, DuelParty.stageWidth,
+                            Singleton.get(GameBoard).scaleX), Singleton.get(GameBoard).height, DuelParty.stageHeight,
+                            Singleton.get(GameBoard).scaleY);
             if (instant) {
-                _gameBoard.scaleX = _gameBoard.scaleY = _cameraZoom;
+                Singleton.get(GameBoard).scaleX = Singleton.get(GameBoard).scaleY = _cameraZoom;
                 updateCamera(true);
             }
         }
@@ -69,7 +59,7 @@ package septenary.duelparty {
             _darkOverlay.graphics.beginFill(0x0, alpha);
             _darkOverlay.graphics.drawRect(0, 0, DuelParty.stageWidth, DuelParty.stageHeight);
             _darkOverlay.alpha = 0;
-            addChildAt(_darkOverlay, getChildIndex(_gameBoard) + 1);
+            addChildAt(_darkOverlay, getChildIndex(Singleton.get(GameBoard)) + 1);
 
             function darkened():void {
                 dispatchEvent(new GameEvent(GameEvent.ACTION_COMPLETE));
@@ -98,28 +88,28 @@ package septenary.duelparty {
         }
 		
 		protected function updateCamera(instantZoom:Boolean=false):void {
-			if (!_gameBoard.background) return;
+			if (!Singleton.get(GameBoard).background) return;
 
             const camZoom:Number = 15;
-            _gameBoard.scaleX += (_cameraZoom - _gameBoard.scaleX) / camZoom;
-            _gameBoard.scaleY = _gameBoard.scaleX;
+            Singleton.get(GameBoard).scaleX += (_cameraZoom - Singleton.get(GameBoard).scaleX) / camZoom;
+            Singleton.get(GameBoard).scaleY = Singleton.get(GameBoard).scaleX;
 			
 			const camMove:Number = 15;
 			var targPoint:Point = new Point(-_cameraTarget.x * _cameraZoom + CAMERA_CENTER.x,
 											-_cameraTarget.y * _cameraZoom + CAMERA_CENTER.y);
 			targPoint.x -= _scrollCoords.x;
 			targPoint.y -= _scrollCoords.y;
-			Utilities.keepPointInBounds(targPoint, new Rectangle(-_gameBoard.background.width * _cameraZoom
-                                                                 + DuelParty.stageWidth,
-                                                                 -_gameBoard.background.height * _cameraZoom
-                                                                 + DuelParty.stageHeight,
+			Utilities.keepPointInBounds(targPoint, new Rectangle(-Singleton.get(GameBoard).background.width *
+                                                                 _cameraZoom + DuelParty.stageWidth,
+                                                                 -Singleton.get(GameBoard).background.height *
+                                                                 _cameraZoom + DuelParty.stageHeight,
                                                                  0, 0));
 			if (instantZoom) {
-                _gameBoard.x = targPoint.x;
-                _gameBoard.y = targPoint.y;
+                Singleton.get(GameBoard).x = targPoint.x;
+                Singleton.get(GameBoard).y = targPoint.y;
             } else {
-                _gameBoard.x += (targPoint.x - _gameBoard.x) / camMove;
-			    _gameBoard.y += (targPoint.y - _gameBoard.y) / camMove;
+                Singleton.get(GameBoard).x += (targPoint.x - Singleton.get(GameBoard).x) / camMove;
+			    Singleton.get(GameBoard).y += (targPoint.y - Singleton.get(GameBoard).y) / camMove;
             }
 		}
 		
@@ -127,8 +117,8 @@ package septenary.duelparty {
             Utilities.assert(_snapCoordinates.length == _superScreens.length, "Sync error in snap coordinates array.");
             for (var i:int = 0; i < _snapCoordinates.length; i++) {
                 if (!_superScreenIsSnapped[i]) continue;
-                _superScreens[i].x = (_gameBoard.x + _snapCoordinates[i].x) * _cameraZoom;
-                _superScreens[i].y = (_gameBoard.y + _snapCoordinates[i].y) * _cameraZoom;
+                _superScreens[i].x = (Singleton.get(GameBoard).x + _snapCoordinates[i].x) * _cameraZoom;
+                _superScreens[i].y = (Singleton.get(GameBoard).y + _snapCoordinates[i].y) * _cameraZoom;
             }
 		}
 		
@@ -166,8 +156,8 @@ package septenary.duelparty {
             pushSuperScreen(screen);
             _snapCoordinates[_snapCoordinates.length-1] = new Point(screen.x, screen.y);
             _superScreenIsSnapped[_superScreenIsSnapped.length-1] = true;
-            screen.x += _gameBoard.x;
-            screen.y += _gameBoard.y;
+            screen.x += Singleton.get(GameBoard).x;
+            screen.y += Singleton.get(GameBoard).y;
             screen.x *= _cameraZoom;
             screen.y *= _cameraZoom;
         }
@@ -179,16 +169,16 @@ package septenary.duelparty {
         }
 
         public override function addGUIAnimation(anim:Sprite, data:Object):void {
-            _gameBoard.addChildToOverlay(anim);
+            Singleton.get(GameBoard).addChildToOverlay(anim);
         }
 		
 		public override function gainedFocus():void {
-			_gameBoard.gainedFocus();	
+			Singleton.get(GameBoard).gainedFocus();	
 			super.gainedFocus();
 		}
 		
 		public override function lostFocus():void {
-			_gameBoard.lostFocus();
+			Singleton.get(GameBoard).lostFocus();
 			super.lostFocus();
 		}
 

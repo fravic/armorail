@@ -449,8 +449,8 @@ package septenary.duelparty {
         }
 
         protected function loadMapAtPath(e:GameEvent):void {
-            GameEvent.addOneTimeEventListener(BoardLoader.getBoardLoader(), GameEvent.ACTION_COMPLETE, boardLoaded);
-            BoardLoader.getBoardLoader().loadBoard(e.data.text);
+            GameEvent.addOneTimeEventListener(Singleton.get(BoardLoader), GameEvent.ACTION_COMPLETE, boardLoaded);
+            Singleton.get(BoardLoader).loadBoard(e.data.text);
         }
 
         protected function boardLoaded(e:GameEvent):void {

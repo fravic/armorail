@@ -71,7 +71,7 @@ package septenary.duelparty {
 
         protected function teleportMovement(tile:BoardTile):void {
             if (!this.stage) {
-                GameBoard.getGameBoard().addChildToField(this);
+                Singleton.get(GameBoard).addChildToField(this);
             }
             _movement.teleportToTile(tile);
         }

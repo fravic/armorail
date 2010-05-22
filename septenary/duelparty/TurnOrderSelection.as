@@ -152,8 +152,8 @@ package septenary.duelparty {
             const words:Array = ["First", "Second", "Third", "Fourth", "Fifth", "Sixth", "Seventh", "Eighth"];
 
             if (turnOrderNum >= _players.length) {
-                GameScreen.getGameScreen().addEventListener(GameEvent.ACTION_COMPLETE, closeScreen);
-                GameScreen.getGameScreen().unDarken();
+                Singleton.get(GameScreen).addEventListener(GameEvent.ACTION_COMPLETE, closeScreen);
+                Singleton.get(GameScreen).unDarken();
                 return;
             }
 

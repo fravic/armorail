@@ -16,7 +16,7 @@ package septenary.duelparty {
             _local = local;
             _players = players;
 
-            var placements:Array = GameInterface.getGameInterface().placementsForPlayers(_players);
+            var placements:Array = Singleton.get(GameInterface).placementsForPlayers(_players);
 
             for (var i:int = 0; i < players.length; i++) {
                 var box:EndStatsBox = endStatsBoxForPlayer(players[i], placements[i]);
@@ -25,8 +25,8 @@ package septenary.duelparty {
                 addChild(box);
             }
 
-            GameScreen.getGameScreen().darken();
-            GameInterface.getGameInterface().hidePlayerInterfaces();
+            Singleton.get(GameScreen).darken();
+            Singleton.get(GameInterface).hidePlayerInterfaces();
 
             super();
         }
@@ -51,8 +51,8 @@ package septenary.duelparty {
         }
 
         protected function closeExtro():void {
-            GameScreen.getGameScreen().unDarken();
-            GameInterface.getGameInterface().showPlayerInterfaces();
+            Singleton.get(GameScreen).unDarken();
+            Singleton.get(GameInterface).showPlayerInterfaces();
         }
     }
 }

@@ -19,9 +19,9 @@ package septenary.duelparty {
                 loadingScreen.lbl.text = "Logging In";
                 pushSuperScreen(loadingScreen);
 
-                GameEvent.addOneTimeEventListener(NetworkManager.getNetworkManager(), GameEvent.ACTION_COMPLETE, 
+                GameEvent.addOneTimeEventListener(Singleton.get(NetworkManager), GameEvent.ACTION_COMPLETE,
                                                   networkLoginHandler);
-                NetworkManager.getNetworkManager().loginAsGuest();          
+                Singleton.get(NetworkManager).loginAsGuest();
             }
         }
 

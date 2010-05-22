@@ -107,7 +107,7 @@ package septenary.duelparty {
 
         public function hasPlayerFocus():Boolean {
             if (_player == null) return true;
-            return _player.playerData.inputSource == PLAYER_INPUT;
+            return (Boolean)(_player.playerData.inputSource == PLAYER_INPUT);
         }
 	}
 }

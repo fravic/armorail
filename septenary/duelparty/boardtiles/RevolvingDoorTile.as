@@ -44,7 +44,7 @@ package septenary.duelparty.boardtiles {
         public override function setup():void {
             //Sort tilesOut by angle
 
-            GameBoard.getGameBoard().addEventListener(GameEvent.START_TURN, attemptMoveDoor);
+            Singleton.get(GameBoard).addEventListener(GameEvent.START_TURN, attemptMoveDoor);
             setupDoorAnim();
         }
 
@@ -90,7 +90,7 @@ package septenary.duelparty.boardtiles {
             _doorAnim = new RevolvingDoorAnim();
             _doorAnim.x = x;
             _doorAnim.y = y;
-            GameBoard.getGameBoard().addChildToBackground(_doorAnim);
+            Singleton.get(GameBoard).addChildToBackground(_doorAnim);
             repositionDoor();
         }
 

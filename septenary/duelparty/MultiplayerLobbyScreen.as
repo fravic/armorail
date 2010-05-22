@@ -34,9 +34,9 @@ package septenary.duelparty {
             _loadingScreen.lbl.text = "Searching For Players... 0/2";
             pushSuperScreen(_loadingScreen);
 
-            GameEvent.addOneTimeEventListener(NetworkManager.getNetworkManager(), GameEvent.ACTION_COMPLETE,
+            GameEvent.addOneTimeEventListener(Singleton.get(NetworkManager), GameEvent.ACTION_COMPLETE,
                                               roomPollHandler);
-            NetworkManager.getNetworkManager().pollRooms(QUICKPLAY);
+            Singleton.get(NetworkManager).pollRooms(QUICKPLAY);
         }
 
         protected function roomPollHandler(e:GameEvent):void {
@@ -44,30 +44,30 @@ package septenary.duelparty {
             for (var i:int = 0; i < e.data.rooms.length; i++) {
                 var roomInfo:RoomInfo = e.data.rooms[i];
                 if (roomInfo.onlineUsers < parseInt(roomInfo.data.numUsers)) {
-                    NetworkManager.getNetworkManager().joinRoom(roomInfo);
+                    Singleton.get(NetworkManager).joinRoom(roomInfo);
                     return;
                 }
             }
 
             //Couldn't find room, create own room
-            NetworkManager.getNetworkManager().createRoom(2);
+            Singleton.get(NetworkManager).createRoom(2);
         }
 
         protected function netMessageHandler(e:GameEvent):void {
             if (e.data.type == NetworkMessage.JOIN) {
-                NetworkManager.getNetworkManager().claimMessage(e.data.message);
+                Singleton.get(NetworkManager).claimMessage(e.data.message);
 
-                var name:String = NetworkManager.getNetworkManager().localPlayerName;
-                var netID:String = NetworkManager.getNetworkManager().localPlayerNetID;
+                var name:String = Singleton.get(NetworkManager).localPlayerName;
+                var netID:String = Singleton.get(NetworkManager).localPlayerNetID;
 
                 _localPlayerNum = e.data.netData.numUsers;
 
                 //Send out our player data so that the newly joined player knows who we are
-                NetworkManager.getNetworkManager().sendMessage(NetworkMessage.PLAYER_DATA, {name:name,
+                Singleton.get(NetworkManager).sendMessage(NetworkMessage.PLAYER_DATA, {name:name,
                                           playerNetID:netID, playerNum:_localPlayerNum});
                 
             } else if (e.data.type == NetworkMessage.PLAYER_DATA) {
-                NetworkManager.getNetworkManager().claimMessage(e.data.message);
+                Singleton.get(NetworkManager).claimMessage(e.data.message);
 
                 //Don't double-add player datas
                 for (var i:int = 0; i < _playersInRoom.length; i++) {
@@ -81,7 +81,7 @@ package septenary.duelparty {
                 }
 
                 var inputSrc:int = e.data.netData.playerNetID ==
-                                   NetworkManager.getNetworkManager().localPlayerNetID ?
+                                   Singleton.get(NetworkManager).localPlayerNetID ?
                                    NetScreen.PLAYER_INPUT :
                                    NetScreen.NET_INPUT;
                 var display:String = normPlayerNum ? "PlayerBlue" : "PlayerOrange";
@@ -104,12 +104,12 @@ package septenary.duelparty {
         }
 
         public override function screenWillEnter():void {
-			NetworkManager.getNetworkManager().addEventListener(GameEvent.NETWORK_MESSAGE, netMessageHandler,
+			Singleton.get(NetworkManager).addEventListener(GameEvent.NETWORK_MESSAGE, netMessageHandler,
                                                                 false, 0, true);
         }
 
         public override function screenWillExit():void {
-			NetworkManager.getNetworkManager().removeEventListener(GameEvent.NETWORK_MESSAGE, netMessageHandler);
+			Singleton.get(NetworkManager).removeEventListener(GameEvent.NETWORK_MESSAGE, netMessageHandler);
         }
 
         public override function gainedFocus():void {

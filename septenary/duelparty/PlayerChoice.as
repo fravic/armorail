@@ -25,11 +25,11 @@ package septenary.duelparty {
 
         protected function highlightPlayerForFocusable(e:MouseEvent):void {
             var player:DisplayObject = _playersForFocusables[e.target];
-            selectArrow.x = player.x + GameBoard.getGameBoard().x;
-            selectArrow.y = player.y + GameBoard.getGameBoard().y;
+            selectArrow.x = player.x + Singleton.get(GameBoard).x;
+            selectArrow.y = player.y + Singleton.get(GameBoard).y;
             Utilities.highlightObject(player);
 
-            var inter:DisplayObject = GameInterface.getGameInterface().interfaceForPlayer[player];
+            var inter:DisplayObject = Singleton.get(GameInterface).interfaceForPlayer[player];
             if (inter) {
                 Utilities.highlightObject(inter);
             }
@@ -38,7 +38,7 @@ package septenary.duelparty {
         protected function unHighlightPlayerForFocusable(e:MouseEvent):void {
             var player:DisplayObject = _playersForFocusables[e.target];
             Utilities.unHighlightObject(player);
-            var inter:DisplayObject = GameInterface.getGameInterface().interfaceForPlayer[player];
+            var inter:DisplayObject = Singleton.get(GameInterface).interfaceForPlayer[player];
             if (inter) {
                 Utilities.unHighlightObject(inter);
             }

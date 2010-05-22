@@ -33,8 +33,8 @@ package septenary.duelparty.boardtiles {
         }
 
         protected function damageDone(e:GameEvent):void {
-            GameEvent.addOneTimeEventListener(GameBoard.getGameBoard(), GameEvent.GAME_NOT_OVER, gameNotOver);
-            GameBoard.getGameBoard().checkForGameEnd();
+            GameEvent.addOneTimeEventListener(Singleton.get(GameBoard), GameEvent.GAME_NOT_OVER, gameNotOver);
+            Singleton.get(GameBoard).checkForGameEnd();
         }
 
         protected function gameNotOver(e:GameEvent):void {

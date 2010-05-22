@@ -13,8 +13,6 @@ package septenary.duelparty {
 
         private static const CLASS_INCLUDES:ClassIncludes = new ClassIncludes();
 
-        private static var activeGame:DuelParty;
-
 		public static const UPDATE_INTERVAL:int = 33;
         public static var stageWidth:Number;
         public static var stageHeight:Number;
@@ -23,12 +21,8 @@ package septenary.duelparty {
 		protected var _currentState:Screen;
 		protected var _updateTimer:Timer = new Timer(DuelParty.UPDATE_INTERVAL);
 
-        public static function getGame():DuelParty {
-            return activeGame;
-        }
-
 		public function DuelParty():void {
-            activeGame = this;
+            Singleton.init(this);
 
             this.stage.scaleMode = StageScaleMode.NO_SCALE;
             this.stage.align = StageAlign.TOP_LEFT;
@@ -45,6 +39,14 @@ package septenary.duelparty {
 			_updateTimer.start();
 
             addChild(new BlackTransition());
+
+            CONFIG::SINGLE_PLAYER {
+                switchState(GameScreen, {boardType:"default", playerDatas:[new PlayerData(0, "PlayerBlue", "Fravic",
+                                                                         NetScreen.PLAYER_INPUT, "fravic", 0xFF0000, 0),
+                                                                           new PlayerData(0, "PlayerOrange", "Tim", 
+                                                                         NetScreen.PLAYER_INPUT, "tim", 0x0000FF, 0)]});
+                return;
+            }
 			switchState(MainMenuScreen, {});
 		}
 				
@@ -59,9 +61,9 @@ package septenary.duelparty {
 			}
 			_currentState = new State(screenData);
             _currentState.gainedFocus();
-            BlackTransition.getBlackTransition().setMasked(_currentState);
+            Singleton.get(BlackTransition).setMasked(_currentState);
 			addChild(_currentState);
-		}
+		} 
 
         protected function stageResized(e:Event):void {
             
