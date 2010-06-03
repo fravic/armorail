@@ -1,4 +1,6 @@
 package septenary.duelparty {
+    import septenary.duelparty.screens.*;
+
     import flash.events.EventDispatcher;
 
 	import playerio.*;
@@ -172,8 +174,8 @@ package septenary.duelparty {
 			Utilities.logx("PLAYER.IO RECIEVED MESSAGE:", m);
 
             CONFIG::DEBUG {
-                if (Singleton.get(GameInterface)) {
-                    Singleton.get(GameInterface).addChatMessage(m.toString(), "NetMessage", 0xFF0000);
+                if (Singleton.get(GameInterfaceScreen)) {
+                    Singleton.get(GameInterfaceScreen).addChatMessage(m.toString(), "NetMessage", 0xFF0000);
                 }
             }
 

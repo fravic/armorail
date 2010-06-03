@@ -1,4 +1,6 @@
 package septenary.duelparty {
+    import septenary.duelparty.screens.*;
+
 	import com.greensock.plugins.*;
 
     import flash.display.Stage;
@@ -38,7 +40,7 @@ package septenary.duelparty {
 			_updateTimer.addEventListener(TimerEvent.TIMER, update, false, 0, true);
 			_updateTimer.start();
 
-            addChild(new BlackTransition());
+            addChild(new BlackTransitionScreen());
 
             CONFIG::SINGLE_PLAYER {
                 switchState(GameScreen, {boardType:"Level1", playerDatas:[new PlayerData(0, "PlayerBlue", "Fravic",
@@ -61,7 +63,7 @@ package septenary.duelparty {
 			}
 			_currentState = new State(screenData);
             _currentState.gainedFocus();
-            Singleton.get(BlackTransition).setMasked(_currentState);
+            Singleton.get(BlackTransitionScreen).setMasked(_currentState);
 			addChild(_currentState);
 		} 
 

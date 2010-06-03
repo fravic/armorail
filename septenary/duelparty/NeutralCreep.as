@@ -1,8 +1,10 @@
 package septenary.duelparty {
+    import septenary.duelparty.ui.*;
+
     import flash.geom.Point;
     import flash.display.Sprite;
 
-    public class NeutralCreep extends Fighter implements Fightmaster {
+    public class NeutralCreep extends Fighter implements IFightmaster {
 
         protected var _bountyPayable:Object = null;
         

@@ -101,6 +101,7 @@ package septenary.duelparty {
             } else if (type == ByteArray) {
                 return m.getByteArray(index);
             }
+            return null;
         }
 
         protected function defaultValueForType(type:Class):* {

@@ -1,5 +1,6 @@
 package septenary.duelparty.boardtiles {
     import septenary.duelparty.*;
+    import septenary.duelparty.screens.*;
 
     public class BuffTile extends BoardTile {
 
@@ -31,7 +32,7 @@ package septenary.duelparty.boardtiles {
                 function dialogBoxDismissed(e:GameEvent):void {
                     activateDone(player);
                 }
-                Singleton.get(GameInterface).showDialogBox(DialogBox.DIALOG_ONLY,
+                Singleton.get(GameInterfaceScreen).showDialogBox(DialogScreen.DIALOG_ONLY,
                     {speaker:"Buff Tile", dialog:"This is a buff tile, but you have no fighters to buff!",
                      player:player},
                     dialogBoxDismissed);
@@ -51,7 +52,7 @@ package septenary.duelparty.boardtiles {
                 BuffTile.buffedFighters.push(fighter);
 
                 buffAnimation(fighter, player);
-                Singleton.get(GameInterface).updatePlayerInterface(player);
+                Singleton.get(GameInterfaceScreen).updatePlayerInterface(player);
             }
         }
 
@@ -64,7 +65,7 @@ package septenary.duelparty.boardtiles {
         }
 
         protected function buffDialog(e:GameEvent):void {
-            Singleton.get(GameInterface).showDialogBox(DialogBox.DIALOG_ONLY,
+            Singleton.get(GameInterfaceScreen).showDialogBox(DialogScreen.DIALOG_ONLY,
                     {speaker:"Buff Tile", dialog:"Your weapon has been buffed!",
                      player:e.data.player},
                     buffDialogDismissed);

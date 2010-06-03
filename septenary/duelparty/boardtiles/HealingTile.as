@@ -1,5 +1,6 @@
 package septenary.duelparty.boardtiles {
     import septenary.duelparty.*;
+    import septenary.duelparty.screens.*;
 
     public class HealingTile extends BoardTile {
 
@@ -18,7 +19,7 @@ package septenary.duelparty.boardtiles {
                 function dialogBoxDismissed(e:GameEvent):void {
                     activateDone(player);
                 }
-                Singleton.get(GameInterface).showDialogBox(DialogBox.DIALOG_ONLY,
+                Singleton.get(GameInterfaceScreen).showDialogBox(DialogScreen.DIALOG_ONLY,
                     {speaker:"Healing Tile", dialog:"This is a healing tile, but you are at maximum health!",
                      player:player}, 
                     dialogBoxDismissed);
