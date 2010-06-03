@@ -16,12 +16,13 @@
   </component>
   <component name="ChangeListManager" verified="true">
     <list default="true" readonly="true" id="ffb2a910-a95c-473c-8a69-f6ee1cb26018" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/DuelParty.as" afterPath="$PROJECT_DIR$/septenary/duelparty/DuelParty.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GameDesignDocument.pdf" afterPath="$PROJECT_DIR$/GameDesignDocument.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/DiceRoll.as" afterPath="$PROJECT_DIR$/septenary/duelparty/DiceRoll.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/septenary/duelparty/Graphics.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/PlayerChoice.as" afterPath="$PROJECT_DIR$/septenary/duelparty/PlayerChoice.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/Focusable.as" afterPath="$PROJECT_DIR$/septenary/duelparty/Focusable.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/Utilities.as" afterPath="$PROJECT_DIR$/septenary/duelparty/Utilities.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/products/DuelParty.swf" afterPath="$PROJECT_DIR$/products/DuelParty.swf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/GameInterface.as" afterPath="$PROJECT_DIR$/septenary/duelparty/GameInterface.as" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/BattleManager.as" afterPath="$PROJECT_DIR$/septenary/duelparty/BattleManager.as" />
     </list>
     <ignored path=".idea/workspace.xml" />
     <ignored path="DuelParty.iws" />
@@ -81,91 +82,91 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="Utilities.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/septenary/duelparty/Utilities.as">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="58" selection-start="693" selection-end="693" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Graphics.as" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/septenary/duelparty/Graphics.as">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="55" selection-start="548" selection-end="548" vertical-scroll-proportion="0.43636364">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="GameInterface.as" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/septenary/duelparty/GameInterface.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="0" selection-start="896" selection-end="896" vertical-scroll-proportion="0.0">
+            <state line="128" column="32" selection-start="5019" selection-end="5019" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameScreen.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/septenary/duelparty/GameScreen.as">
+      <file leaf-file-name="PlayerChoice.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/septenary/duelparty/PlayerChoice.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="84" column="86" selection-start="3319" selection-end="3319" vertical-scroll-proportion="0.0">
+            <state line="37" column="43" selection-start="1478" selection-end="1478" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ContinuousRailway.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/septenary/duelparty/ContinuousRailway.as">
+      <file leaf-file-name="MainMenuScreen.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/septenary/duelparty/MainMenuScreen.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="16" selection-start="1090" selection-end="1090" vertical-scroll-proportion="0.0">
+            <state line="29" column="20" selection-start="1088" selection-end="1088" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FocusableTextField.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/septenary/duelparty/FocusableTextField.as">
+      <file leaf-file-name="BoardTile.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/septenary/duelparty/BoardTile.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="64" selection-start="809" selection-end="809" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DiceRoll.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/septenary/duelparty/DiceRoll.as">
+      <file leaf-file-name="FightableMovement.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/septenary/duelparty/FightableMovement.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="90" column="22" selection-start="2847" selection-end="2847" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Utilities.as" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/septenary/duelparty/Utilities.as">
+      <file leaf-file-name="FighterSelection.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/septenary/duelparty/FighterSelection.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="51" selection-start="1561" selection-end="1561" vertical-scroll-proportion="-1.8818182">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BattleManager.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/septenary/duelparty/BattleManager.as">
+      <file leaf-file-name="GUIAnimationFactory.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/septenary/duelparty/GUIAnimationFactory.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="52" selection-start="968" selection-end="968" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DuelParty.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/septenary/duelparty/DuelParty.as">
+      <file leaf-file-name="Focusable.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/septenary/duelparty/Focusable.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="60" selection-start="636" selection-end="636" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BuffTile.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/septenary/duelparty/boardtiles/BuffTile.as">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="48" selection-start="2707" selection-end="2707" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TeleportationTile.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/septenary/duelparty/boardtiles/TeleportationTile.as">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="24" selection-start="782" selection-end="782" vertical-scroll-proportion="0.0">
+            <state line="57" column="16" selection-start="1895" selection-end="1895" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -188,30 +189,30 @@
     <option name="LINE_SEPARATORS_CONVERSION_ASK" value="false" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/septenary/duelparty/boardtiles/HealingTile.as" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/septenary/duelparty/GameBoard.as" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/septenary/duelparty/NetworkManager.as" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/septenary/duelparty/boardtiles/MineTile.as" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/septenary/duelparty/NetworkManager.as" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/septenary/duelparty/GameBoard.as" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/septenary/duelparty/boardtiles/HealingTile.as" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/septenary/duelparty/Utilities.as" />
-        <option value="$PROJECT_DIR$/septenary/duelparty/MultiplayerLobbyScreen.as" />
-        <option value="$PROJECT_DIR$/septenary/duelparty/BlackTransition.as" />
-        <option value="$PROJECT_DIR$/septenary/duelparty/BoardLoader.as" />
         <option value="$PROJECT_DIR$/septenary/duelparty/NetworkManager.as" />
         <option value="$PROJECT_DIR$/septenary/duelparty/DialogBox.as" />
         <option value="$PROJECT_DIR$/septenary/duelparty/boardtiles/BuffTile.as" />
         <option value="$PROJECT_DIR$/septenary/duelparty/BattleScreen.as" />
         <option value="$PROJECT_DIR$/septenary/duelparty/MainMenuScreen.as" />
         <option value="$PROJECT_DIR$/septenary/duelparty/Singleton.as" />
-        <option value="$PROJECT_DIR$/septenary/duelparty/GameInterface.as" />
         <option value="$PROJECT_DIR$/septenary/duelparty/GameBoard.as" />
         <option value="$PROJECT_DIR$/septenary/duelparty/GameScreen.as" />
         <option value="$PROJECT_DIR$/septenary/duelparty/BattleManager.as" />
         <option value="$PROJECT_DIR$/septenary/duelparty/DuelParty.as" />
         <option value="$PROJECT_DIR$/septenary/duelparty/DiceRoll.as" />
+        <option value="$PROJECT_DIR$/septenary/duelparty/Graphics.as" />
+        <option value="$PROJECT_DIR$/septenary/duelparty/Utilities.as" />
+        <option value="$PROJECT_DIR$/septenary/duelparty/PlayerChoice.as" />
+        <option value="$PROJECT_DIR$/septenary/duelparty/Focusable.as" />
+        <option value="$PROJECT_DIR$/septenary/duelparty/GameInterface.as" />
       </list>
     </option>
   </component>
@@ -308,6 +309,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -407,24 +409,23 @@
         </subPane>
       </pane>
       <pane id="Favorites" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="109" />
-    <property name="project.structure.proportion" value="0.15" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="146" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="MemberChooser.sorted" value="false" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="120" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="MemberChooser.sorted" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Downloads/Box2DFlashAS3 2.1a/Examples/TestBed" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Documents/School/CS 246/Assignment 1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="129" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="920" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="923" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="920" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="125" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="142" />
     <property name="GoToClass.includeJavaFiles" value="false" />
@@ -806,34 +807,14 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/septenary/duelparty/DialogBox.as">
+    <entry file="file://$PROJECT_DIR$/septenary/duelparty/DiceRoll.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="52" selection-start="2028" selection-end="2028" vertical-scroll-proportion="0.0" />
+        <state line="90" column="22" selection-start="2847" selection-end="2847" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/septenary/duelparty/GameBoard.as">
+    <entry file="file://$PROJECT_DIR$/septenary/duelparty/BattleManager.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="132" selection-start="2802" selection-end="2802" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/septenary/duelparty/Singleton.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="57" selection-start="465" selection-end="465" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/septenary/duelparty/MainMenuScreen.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="30" selection-start="276" selection-end="276" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/septenary/duelparty/BattleScreen.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="236" column="37" selection-start="10584" selection-end="10584" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/septenary/duelparty/GameInterface.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="896" selection-end="896" vertical-scroll-proportion="0.0" />
+        <state line="27" column="52" selection-start="968" selection-end="968" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/septenary/duelparty/boardtiles/BuffTile.as">
@@ -846,58 +827,86 @@
         <state line="23" column="24" selection-start="782" selection-end="782" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/septenary/duelparty/GameScreen.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="86" selection-start="3319" selection-end="3319" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/septenary/duelparty/ContinuousRailway.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="16" selection-start="1090" selection-end="1090" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/septenary/duelparty/FocusableTextField.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="64" selection-start="809" selection-end="809" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/products/boards/default.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="67" selection-start="635" selection-end="635" vertical-scroll-proportion="0.6593407">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/septenary/duelparty/BattleManager.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="52" selection-start="968" selection-end="968" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/septenary/duelparty/DuelParty.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="60" selection-start="636" selection-end="636" vertical-scroll-proportion="0.0">
+        <state line="61" column="32" selection-start="2264" selection-end="2264" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/septenary/duelparty/DiceRoll.as">
+    <entry file="file://$PROJECT_DIR$/septenary/duelparty/MainMenuScreen.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="22" selection-start="2847" selection-end="2847" vertical-scroll-proportion="0.0">
+        <state line="29" column="20" selection-start="1088" selection-end="1088" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/septenary/duelparty/BoardTile.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/septenary/duelparty/FightableMovement.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/septenary/duelparty/FighterSelection.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/septenary/duelparty/GUIAnimationFactory.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Documents/School/CS 246/Assignment 1/Password.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="25" selection-start="778" selection-end="778" vertical-scroll-proportion="0.48945147">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/septenary/duelparty/PlayerChoice.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="43" selection-start="1478" selection-end="1478" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/septenary/duelparty/Focusable.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="16" selection-start="1895" selection-end="1895" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/septenary/duelparty/GameInterface.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="128" column="32" selection-start="5019" selection-end="5019" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/septenary/duelparty/Utilities.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="51" selection-start="1561" selection-end="1561" vertical-scroll-proportion="-1.8818182">
+        <state line="25" column="58" selection-start="693" selection-end="693" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/septenary/duelparty/Graphics.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="55" selection-start="548" selection-end="548" vertical-scroll-proportion="0.43636364">
           <folding />
         </state>
       </provider>
