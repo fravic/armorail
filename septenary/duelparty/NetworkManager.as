@@ -7,7 +7,7 @@ package septenary.duelparty {
 
     public class NetworkManager extends EventDispatcher {
 
-        private static const SERVER_TYPE:String = "bounce";
+        private static const SERVER_TYPE:String = "DuelParty";
         private static const ROOM_LIST_LIMIT:int = 50;
 
         protected var _localPlayerNetID:String;
@@ -36,14 +36,9 @@ package septenary.duelparty {
             Singleton.init(this);
 
             //Register message types
-
-            //Player.IO-specific types, DO NOT EDIT
-            NetworkMessage.registerMessageTypeArgs(NetworkMessage.JOIN, [{numUsers:int}, {playerNetID:String}]);
-            NetworkMessage.registerMessageTypeArgs(NetworkMessage.LEFT, [{numUsers:int}, {playerNetID:String}]);
-
-            //Custom types
-            NetworkMessage.registerMessageTypeArgs(NetworkMessage.PLAYER_DATA, [{playerNetID:String}, {name:String},
-                                                                                {playerNum:int}]);
+            NetworkMessage.registerMessageTypeArgs(NetworkMessage.JOIN, [{playerNetID:String}, {name:String},
+                                                                         {playerNum:int}]);
+            NetworkMessage.registerMessageTypeArgs(NetworkMessage.LEFT, [{playerNetID:String}, {playerNum:int}]);
             NetworkMessage.registerMessageTypeArgs(NetworkMessage.DICE_ROLL, [{playerNetID:String}, {roll:int}]);
             NetworkMessage.registerMessageTypeArgs(NetworkMessage.DIALOG_BOX, [{playerNetID:String}, {type:String},
                                                                                {tier:int}]);
@@ -77,6 +72,10 @@ package septenary.duelparty {
 
         protected function handleConnect(client:Client):void {
             _activeClient = client;
+
+            CONFIG::DEVSERVER {
+                client.multiplayer.developmentServer = "localhost:8184";
+            }
 
             trace("PLAYER.IO CONNECTED SUCCESSFULLY!");
             dispatchEvent(new GameEvent(GameEvent.ACTION_COMPLETE, {success:true}));
@@ -116,14 +115,14 @@ package septenary.duelparty {
 
         }
 
-        public function joinRoom(roomInfo:RoomInfo):void {
+        public function joinRoom(roomInfo:RoomInfo, playerName:String):void {
             Utilities.assert(_activeClient != null, "Cannot join room on inactive client!");
             _activeClient.multiplayer.createJoinRoom(
                 roomInfo.id,
                 SERVER_TYPE,
                 true,
-                {},
-                {},
+                {Name:playerName},
+                {Name:playerName},
                 handleRoomJoin,
                 handleRoomJoinError
             );
@@ -151,7 +150,7 @@ package septenary.duelparty {
             var messageQueue:Array = _messageQueue.slice();
             for (var i:int = 0; i < messageQueue.length; i++) {
                 var m:NetworkMessage = messageQueue[i];
-                dispatchEvent(new GameEvent(GameEvent.NETWORK_MESSAGE, {type:m.type, netData:m.data, message:m}));
+                dispatchEvent(new GameEvent(GameEvent.NETWORK_MESSAGE, m));
             }
         }
 

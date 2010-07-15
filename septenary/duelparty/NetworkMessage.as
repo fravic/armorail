@@ -6,12 +6,8 @@ package septenary.duelparty {
 
     public class NetworkMessage {
 
-        //Message types defined by Player.IO
         public static const JOIN:String = "Join";
         public static const LEFT:String = "Left";
-
-        //Game-specific message types
-        public static const PLAYER_DATA:String = "PlayerData";
         public static const DICE_ROLL:String = "DiceRoll";
         public static const DIALOG_BOX:String = "DialogBox";
         public static const DIR_SELECT:String = "DirSelect";
@@ -35,7 +31,7 @@ package septenary.duelparty {
             return _type;
         }
 
-        public function get data():Object {
+        public function get vars():Object {
             return _data;
         }
 

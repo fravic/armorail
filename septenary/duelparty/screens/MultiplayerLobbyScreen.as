@@ -7,15 +7,16 @@ package septenary.duelparty.screens {
 
     public class MultiplayerLobbyScreen extends Screen {
 
+        //Actions
         public static const LOGOUT:String = "Logout";
         public static const START_GAME:String = "StartGame";
 
+        //Button text
         private static const QUICKPLAY:String = "Quickplay";
 
         protected var _loadingScreen:NetLoadingScreen;
 
         protected var _playersInRoom:Array = new Array();
-        protected var _localPlayerNum:int;
 
         public function MultiplayerLobbyScreen(screenData:Object=null) {
             super();
@@ -46,7 +47,7 @@ package septenary.duelparty.screens {
             for (var i:int = 0; i < e.data.rooms.length; i++) {
                 var roomInfo:RoomInfo = e.data.rooms[i];
                 if (roomInfo.onlineUsers < parseInt(roomInfo.data.numUsers)) {
-                    Singleton.get(NetworkManager).joinRoom(roomInfo);
+                    Singleton.get(NetworkManager).joinRoom(roomInfo, "NewPlayer");
                     return;
                 }
             }
@@ -59,37 +60,15 @@ package septenary.duelparty.screens {
             if (e.data.type == NetworkMessage.JOIN) {
                 Singleton.get(NetworkManager).claimMessage(e.data.message);
 
-                var name:String = Singleton.get(NetworkManager).localPlayerName;
-                var netID:String = Singleton.get(NetworkManager).localPlayerNetID;
-
-                _localPlayerNum = e.data.netData.numUsers;
-
-                //Send out our player data so that the newly joined player knows who we are
-                Singleton.get(NetworkManager).sendMessage(NetworkMessage.PLAYER_DATA, {name:name,
-                                          playerNetID:netID, playerNum:_localPlayerNum});
-                
-            } else if (e.data.type == NetworkMessage.PLAYER_DATA) {
-                Singleton.get(NetworkManager).claimMessage(e.data.message);
-
-                //Don't double-add player datas
-                for (var i:int = 0; i < _playersInRoom.length; i++) {
-                    if (_playersInRoom[i].netID == e.data.netData.playerNetID) return;
-                }
-
-                var normPlayerNum:int = 0;
-                for (i = 0; i < _playersInRoom.length; i++) {
-                    if (_playersInRoom[i].playerNum < e.data.netData.playerNum) normPlayerNum++;
-                    else _playersInRoom[i].playerNum++;
-                }
-
-                var inputSrc:int = e.data.netData.playerNetID ==
+                //Construct new player data
+                var inputSrc:int = e.data.vars.playerNetID ==
                                    Singleton.get(NetworkManager).localPlayerNetID ?
                                    NetScreen.PLAYER_INPUT :
                                    NetScreen.NET_INPUT;
-                var display:String = normPlayerNum ? "PlayerBlue" : "PlayerOrange";
-                var color:int = normPlayerNum ? 0x0000FF : 0xFF6500;
-                var newPlayerData:PlayerData = new PlayerData(normPlayerNum, display, e.data.netData.name,
-                                                              inputSrc, e.data.netData.playerNetID, color, 0);
+                var display:String = e.data.vars.playerNum ? "PlayerBlue" : "PlayerOrange";
+                var color:int = e.data.vars.playerNum ? 0x0000FF : 0xFF6500;
+                var newPlayerData:PlayerData = new PlayerData(e.data.vars.playerNum, display, e.data.vars.name,
+                                                              inputSrc, e.data.vars.playerNetID, color, 0);
                 _playersInRoom.push(newPlayerData);
 
                 _loadingScreen.lbl.text = _loadingScreen.lbl.text = "Searching For Players... "
