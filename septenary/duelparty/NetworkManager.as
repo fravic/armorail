@@ -3,9 +3,9 @@ package septenary.duelparty {
 
     import flash.events.EventDispatcher;
 
-	import playerio.*;
+    import playerio.*;
 
-	public class NetworkManager extends EventDispatcher {
+    public class NetworkManager extends EventDispatcher {
 
         private static const SERVER_TYPE:String = "bounce";
         private static const ROOM_LIST_LIMIT:int = 50;
@@ -32,7 +32,7 @@ package septenary.duelparty {
             return _localPlayerName;
         }
 
-		public function NetworkManager() {
+        public function NetworkManager() {
             Singleton.init(this);
 
             //Register message types
@@ -48,20 +48,20 @@ package septenary.duelparty {
             NetworkMessage.registerMessageTypeArgs(NetworkMessage.DIALOG_BOX, [{playerNetID:String}, {type:String},
                                                                                {tier:int}]);
             NetworkMessage.registerMessageTypeArgs(NetworkMessage.DIR_SELECT, [{playerNetID:String}, {dir:int}]);
-		}
+        }
 
         /* LOGIN/ACCOUNT MANAGEMENT */
 
         protected function login(userID:String, authKey:String=""):void {
             PlayerIO.connect(
-				DuelParty.stage,
-				PLAYER_IO_GAME_ID,
-				"public",
-				userID,
-				authKey,
-				handleConnect,
-				handleConnectError
-			);
+                DuelParty.stage,
+                PLAYER_IO_GAME_ID,
+                "public",
+                userID,
+                authKey,
+                handleConnect,
+                handleConnectError
+            );
         }
 
         public function loginToFacebook(username:String, password:String):void {
@@ -98,14 +98,14 @@ package septenary.duelparty {
         public function createRoom(numUsers:int):void {
             Utilities.assert(_activeClient != null, "Cannot create room on inactive client!");
             _activeClient.multiplayer.createJoinRoom(
-				"test"+Math.round(Math.random() * 1000),
-				SERVER_TYPE,
-				true,
-				{numUsers:numUsers.toString()},
+                "test"+Math.round(Math.random() * 1000),
+                SERVER_TYPE,
+                true,
+                {numUsers:numUsers.toString()},
                 {},
-				handleRoomCreate,
-				handleRoomCreateError
-			);
+                handleRoomCreate,
+                handleRoomCreateError
+            );
         }
 
         protected function handleRoomCreate(connection:Connection):void {
@@ -119,14 +119,14 @@ package septenary.duelparty {
         public function joinRoom(roomInfo:RoomInfo):void {
             Utilities.assert(_activeClient != null, "Cannot join room on inactive client!");
             _activeClient.multiplayer.createJoinRoom(
-				roomInfo.id,
-				SERVER_TYPE,
-				true,
-				{},
+                roomInfo.id,
+                SERVER_TYPE,
+                true,
                 {},
-				handleRoomJoin,
-				handleRoomJoinError
-			);
+                {},
+                handleRoomJoin,
+                handleRoomJoinError
+            );
         }
 
         protected function handleRoomJoin(connection:Connection):void {
@@ -171,7 +171,7 @@ package septenary.duelparty {
         }
 
         protected function handleMessage(m:Message){
-			Utilities.logx("PLAYER.IO RECIEVED MESSAGE:", m);
+            Utilities.logx("PLAYER.IO RECIEVED MESSAGE:", m);
 
             CONFIG::DEBUG {
                 if (Singleton.get(GameInterfaceScreen)) {
@@ -184,9 +184,9 @@ package septenary.duelparty {
 
             _messageQueue.push(netMessage);
             dispatchQueuedMessages();
-		}
+        }
 
-		protected function handleDisconnect():void{
-		}
-	}
+        protected function handleDisconnect():void{
+        }
+    }
 }

@@ -43,7 +43,7 @@ package septenary.duelparty {
             addChild(new BlackTransitionScreen());
 
             CONFIG::SINGLE_PLAYER {
-                switchState(GameScreen, {boardType:"Level1", playerDatas:[new PlayerData(0, "PlayerBlue", "Fravic",
+                switchState(GameScreen, {boardType:"default", playerDatas:[new PlayerData(0, "PlayerBlue", "Fravic",
                                                                          NetScreen.PLAYER_INPUT, "fravic", 0xFF0000, 0),
                                                                            new PlayerData(0, "PlayerOrange", "Tim", 
                                                                          NetScreen.PLAYER_INPUT, "tim", 0x0000FF, 0)]});

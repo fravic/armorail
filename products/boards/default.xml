@@ -34,19 +34,19 @@
       </tilesOut>
     </tile>
     <tile id="5" x="705" y="315">
-      <type>Reversal</type>
+      <type>Mine</type>
       <tilesOut>
         <tileOut>6</tileOut>
       </tilesOut>
     </tile>
     <tile id="6" x="705" y="135">
-      <type>Reversal</type>
+      <type>Mine</type>
       <tilesOut>
         <tileOut>7</tileOut>
       </tilesOut>
     </tile>
     <tile id="7" x="435" y="135">
-      <type>Reversal</type>
+      <type>Mine</type>
       <tilesOut>
         <tileOut>0</tileOut>
       </tilesOut>

@@ -52,7 +52,7 @@ package septenary.duelparty.screens {
 
         protected function startWithNotification():void {
             showDialogBox(DialogScreen.DIALOG_ONLY, {speaker:"Turn Order",
-                dialog:"Hey!  Let's start by determining turn order.  Roll teh dice, yo!"}, determineTurnOrder);
+                dialog:"Hey!  Let's start by determining turn order.  Roll the dice!"}, determineTurnOrder);
             repositionDialogBox();
         }
 
