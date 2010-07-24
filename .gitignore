@@ -10,7 +10,8 @@ PlayerIOTest.*
 RailsTest.*
 resources
 box2dtest
-server
 DuelParty_iPhone.fla
 *.pptx
 *.suo
+server/bin
+server/obj
