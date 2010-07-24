@@ -6,11 +6,13 @@ package septenary.duelparty {
 
     public class NetworkMessage {
 
-        public static const JOIN:String = "Join";
-        public static const LEFT:String = "Left";
-        public static const DICE_ROLL:String = "DiceRoll";
-        public static const DIALOG_BOX:String = "DialogBox";
-        public static const DIR_SELECT:String = "DirSelect";
+        public static const JOIN:String = "JOIN";
+        public static const LEFT:String = "LEFT";
+        public static const PLAYER_DATA_REQUEST:String = "PLAYER_DATA_REQUEST";
+        public static const DICE_ROLL:String = "DICE_ROLL";
+        public static const DIALOG_BOX:String = "DIALOG_BOX";
+        public static const DIR_SELECT:String = "DIR_SELECT";
+        public static const FOCUS_CHANGE:String = "FOCUS_CHANGE";
 
         private static var _typeArgsDictionary:Dictionary = new Dictionary();
 
@@ -96,6 +98,8 @@ package septenary.duelparty {
                 return m.getBoolean(index);
             } else if (type == ByteArray) {
                 return m.getByteArray(index);
+            } else if (type == Array) {
+                return m.getString(index).split(",");
             }
             return null;
         }

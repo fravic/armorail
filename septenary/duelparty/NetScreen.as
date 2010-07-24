@@ -1,4 +1,4 @@
-package septenary.duelparty {
+﻿package septenary.duelparty {
 
     import flash.utils.setTimeout;
 
@@ -39,7 +39,10 @@ package septenary.duelparty {
             getFocusManager().disablePlayerInput(this);
             getFocusManager().registerFocusables(this);
         }
-		protected function gainedNetFocus():void {}
+		protected function gainedNetFocus():void {
+            getFocusManager().disablePlayerInput(this);
+            getFocusManager().registerFocusables(this);
+        }
 		
 		public override function lostFocus():void {
 			execInputFunction(lostPlayerFocus, lostAIFocus, lostNetFocus);
@@ -52,7 +55,10 @@ package septenary.duelparty {
             getFocusManager().clearFocusablesInsideDisplay(this);
             getFocusManager().enablePlayerInput(this);
         }
-		protected function lostNetFocus():void {}
+		protected function lostNetFocus():void {
+            getFocusManager().clearFocusablesInsideDisplay(this);
+            getFocusManager().enablePlayerInput(this);
+        }
 		
 		protected function execInputFunction(inpPl:Function, inpAI:Function, inpNet:Function):void {
 			switch (this.inputSource) {
@@ -80,6 +86,9 @@ package septenary.duelparty {
                     setTimeout(selectFocusable, selectInterval);
                 } else {
                     var curF:Focusable = getFocusManager().curFocusable;
+                    Utilities.assert(curF != null, "Must have a current focusable to navigate from!  Focusable " +
+                                                   "listeners may not have been registered or initialized.");
+
                     var angle:Number = Utilities.normalizeRadAngle(Math.atan2(f.y - curF.y, f.x - curF.x));
                     if (angle <= Math.PI/4) {
                         getFocusManager().focusableRight();

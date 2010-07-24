@@ -50,6 +50,11 @@ package septenary.duelparty.screens {
 		}
 		
 		protected function selectChoiceArrow(choiceArrow:DirChoiceArrow):void {
+            if (this.hasPlayerFocus() && _player != null) {
+                Singleton.get(NetworkManager).sendMessage(NetworkMessage.DIR_SELECT,
+                    {playerNetID:_player.playerData.netID, dir:_choiceIndices[choiceArrow]});
+            }
+
             dispatchEvent(new GameEvent(GameEvent.ACTION_COMPLETE,
                                        {player:_player, index:_choiceIndices[choiceArrow]}));
 		}
@@ -60,6 +65,15 @@ package septenary.duelparty.screens {
 
         protected function aiHandler(e:GameEvent):void {
             navigateToAndSelectFocusable(_choiceArrows[e.data.action.tileIndex]);
+        }
+
+        protected function netMessageHandler(e:GameEvent):void {
+            if (e.data.type == NetworkMessage.DIR_SELECT && e.data.vars.playerNetID == _player.playerData.netID) {
+                Singleton.get(NetworkManager).claimMessage(e.data);
+                var syntheticEvent:GameEvent = new GameEvent(GameEvent.NETWORK_MESSAGE,
+                    {action:{tileIndex:e.data.vars.dir}});
+                aiHandler(syntheticEvent);
+            }
         }
 		
 		protected override function gainedPlayerFocus():void {
@@ -93,6 +107,19 @@ package septenary.duelparty.screens {
         protected override function lostAIFocus():void {
             super.lostAIFocus();
             getFocusManager().removeGeneralFocusableListener(this, choiceArrowDown);
+        }
+
+        protected override function gainedNetFocus():void {
+            super.gainedNetFocus();
+            getFocusManager().addGeneralFocusableListener(this, choiceArrowDown);
+			Singleton.get(NetworkManager).addEventListener(GameEvent.NETWORK_MESSAGE, netMessageHandler);
+            Singleton.get(NetworkManager).dispatchQueuedMessages();
+        }
+
+        protected override function lostNetFocus():void {
+            super.lostNetFocus();
+            getFocusManager().removeGeneralFocusableListener(this, choiceArrowDown);
+			Singleton.get(NetworkManager).removeEventListener(GameEvent.NETWORK_MESSAGE, netMessageHandler);
         }
 	}
 }

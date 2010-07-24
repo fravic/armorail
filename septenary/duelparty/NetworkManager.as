@@ -36,13 +36,20 @@ package septenary.duelparty {
             Singleton.init(this);
 
             //Register message types
-            NetworkMessage.registerMessageTypeArgs(NetworkMessage.JOIN, [{playerNetID:String}, {name:String},
-                                                                         {playerNum:int}]);
-            NetworkMessage.registerMessageTypeArgs(NetworkMessage.LEFT, [{playerNetID:String}, {playerNum:int}]);
-            NetworkMessage.registerMessageTypeArgs(NetworkMessage.DICE_ROLL, [{playerNetID:String}, {roll:int}]);
-            NetworkMessage.registerMessageTypeArgs(NetworkMessage.DIALOG_BOX, [{playerNetID:String}, {type:String},
-                                                                               {tier:int}]);
-            NetworkMessage.registerMessageTypeArgs(NetworkMessage.DIR_SELECT, [{playerNetID:String}, {dir:int}]);
+            NetworkMessage.registerMessageTypeArgs(NetworkMessage.JOIN,
+                [{playerNetID:String}, {name:String}, {playerNum:int}, {playersInRoom:int}, {playersExpected:int}]);
+            NetworkMessage.registerMessageTypeArgs(NetworkMessage.LEFT,
+                [{playerNetID:String}, {name:String}, {playerNum:int}, {playersInRoom:int}, {playersExpected:int}]);
+            NetworkMessage.registerMessageTypeArgs(NetworkMessage.PLAYER_DATA_REQUEST,
+                [{playersInRoom:int}, {playersExpected:int}, {playerNetIDs:Array}, {playerNames:Array}]);
+            NetworkMessage.registerMessageTypeArgs(NetworkMessage.DICE_ROLL,
+                [{playerNetID:String}, {roll:int}]);
+            NetworkMessage.registerMessageTypeArgs(NetworkMessage.DIALOG_BOX, 
+                [{playerNetID:String}, {type:String}, {tier:int}]);
+            NetworkMessage.registerMessageTypeArgs(NetworkMessage.DIR_SELECT,
+                [{playerNetID:String}, {dir:int}]);
+            NetworkMessage.registerMessageTypeArgs(NetworkMessage.FOCUS_CHANGE,
+                [{playerNetID:String}, {focusable:int}]);
         }
 
         /* LOGIN/ACCOUNT MANAGEMENT */
@@ -94,35 +101,27 @@ package septenary.duelparty {
             _activeConnection.addMessageHandler("*", handleMessage);
         }
 
-        public function createRoom(numUsers:int):void {
-            Utilities.assert(_activeClient != null, "Cannot create room on inactive client!");
-            _activeClient.multiplayer.createJoinRoom(
-                "test"+Math.round(Math.random() * 1000),
-                SERVER_TYPE,
-                true,
-                {numUsers:numUsers.toString()},
-                {},
-                handleRoomCreate,
-                handleRoomCreateError
-            );
-        }
-
-        protected function handleRoomCreate(connection:Connection):void {
-            initConnection(connection);
-        }
-
-        protected function handleRoomCreateError(error:PlayerIOError):void {
-
+        public function createRoom(numPlayers:int, playerName:String):void {
+            createJoinRoom("test"+Math.round(Math.random() * 1000), {numPlayers:numPlayers, onlineUsers:0},
+                {name:playerName});
         }
 
         public function joinRoom(roomInfo:RoomInfo, playerName:String):void {
+            createJoinRoom(roomInfo.id, {}, {name:playerName});
+        }
+
+        protected function createJoinRoom(roomID:String, roomData:Object, joinData:Object):void {
             Utilities.assert(_activeClient != null, "Cannot join room on inactive client!");
+
+            for (var i:* in roomData) roomData[i] = roomData[i].toString();
+            for (var j:* in joinData) joinData[j] = joinData[j].toString();
+
             _activeClient.multiplayer.createJoinRoom(
-                roomInfo.id,
+                roomID,
                 SERVER_TYPE,
                 true,
-                {Name:playerName},
-                {Name:playerName},
+                roomData,
+                joinData,
                 handleRoomJoin,
                 handleRoomJoinError
             );
@@ -158,14 +157,17 @@ package septenary.duelparty {
             _messageQueue.splice(_messageQueue.indexOf(m));
         }
 
-        public function sendMessage(type:String, data:Object):void {
+        public function sendMessage(type:String, data:Object=null):void {
             if (_activeConnection == null) {
                 Utilities.logx("Warning: Cannot send message to an inactive connection.");
                 return;
             }
 
-            var message:NetworkMessage = new NetworkMessage(type, data);
-            var argsArray:Array = [type].concat(message.serializedData);
+            var argsArray:Array = [type];
+            if (data != null) {
+                var message:NetworkMessage = new NetworkMessage(type, data);
+                argsArray = argsArray.concat(message.serializedData);
+            }
             _activeConnection.send.apply(_activeConnection, argsArray);
         }
 
