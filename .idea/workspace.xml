@@ -16,14 +16,12 @@
   </component>
   <component name="ChangeListManager" verified="true">
     <list default="true" readonly="true" id="ffb2a910-a95c-473c-8a69-f6ee1cb26018" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/products/boards/default.xml" afterPath="$PROJECT_DIR$/products/boards/default.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/DuelParty.as" afterPath="$PROJECT_DIR$/septenary/duelparty/DuelParty.as" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/screens/BattleScreen.as" afterPath="$PROJECT_DIR$/septenary/duelparty/screens/BattleScreen.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/products/DuelParty.swf" afterPath="$PROJECT_DIR$/products/DuelParty.swf" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/NetworkManager.as" afterPath="$PROJECT_DIR$/septenary/duelparty/NetworkManager.as" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/screens/TurnOrderSelectionScreen.as" afterPath="$PROJECT_DIR$/septenary/duelparty/screens/TurnOrderSelectionScreen.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/BattleManager.as" afterPath="$PROJECT_DIR$/septenary/duelparty/BattleManager.as" />
     </list>
     <ignored path=".idea/workspace.xml" />
