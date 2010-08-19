@@ -6,15 +6,13 @@ package septenary.duelparty {
 
     public class NetworkMessage {
 
-        //Message types defined by Player.IO
-        public static const JOIN:String = "Join";
-        public static const LEFT:String = "Left";
-
-        //Game-specific message types
-        public static const PLAYER_DATA:String = "PlayerData";
-        public static const DICE_ROLL:String = "DiceRoll";
-        public static const DIALOG_BOX:String = "DialogBox";
-        public static const DIR_SELECT:String = "DirSelect";
+        public static const JOIN:String = "JOIN";
+        public static const LEFT:String = "LEFT";
+        public static const PLAYER_DATA_REQUEST:String = "PLAYER_DATA_REQUEST";
+        public static const DICE_ROLL:String = "DICE_ROLL";
+        public static const DIALOG_BOX:String = "DIALOG_BOX";
+        public static const DIR_SELECT:String = "DIR_SELECT";
+        public static const FOCUS_CHANGE:String = "FOCUS_CHANGE";
 
         private static var _typeArgsDictionary:Dictionary = new Dictionary();
 
@@ -35,7 +33,7 @@ package septenary.duelparty {
             return _type;
         }
 
-        public function get data():Object {
+        public function get vars():Object {
             return _data;
         }
 
@@ -100,6 +98,12 @@ package septenary.duelparty {
                 return m.getBoolean(index);
             } else if (type == ByteArray) {
                 return m.getByteArray(index);
+            } else if (type == Array) {
+                var str:String = m.getString(index);
+                var arr:Array = str.split(",");
+                //Chop off null tail if necessary
+                if (str.charAt(str.length-1) == ",") arr = arr.slice(0, -1);
+                return arr;
             }
             return null;
         }

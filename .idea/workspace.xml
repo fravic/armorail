@@ -16,16 +16,174 @@
   </component>
   <component name="ChangeListManager" verified="true">
     <list default="true" readonly="true" id="ffb2a910-a95c-473c-8a69-f6ee1cb26018" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/DuelParty.as" afterPath="$PROJECT_DIR$/septenary/duelparty/DuelParty.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/screens/BattleScreen.as" afterPath="$PROJECT_DIR$/septenary/duelparty/screens/BattleScreen.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/NetworkManager.as" afterPath="$PROJECT_DIR$/septenary/duelparty/NetworkManager.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/screens/TurnOrderSelectionScreen.as" afterPath="$PROJECT_DIR$/septenary/duelparty/screens/TurnOrderSelectionScreen.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/threeD/zones/BoxZone.as" afterPath="$PROJECT_DIR$/org/flintparticles/threeD/zones/BoxZone.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/NetworkMessage.as" afterPath="$PROJECT_DIR$/septenary/duelparty/NetworkMessage.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/threeD/zones/DiscZone.as" afterPath="$PROJECT_DIR$/org/flintparticles/threeD/zones/DiscZone.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/zones/GreyscaleZone.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/zones/GreyscaleZone.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/actions/RotationalQuadraticDrag.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/actions/RotationalQuadraticDrag.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/initializers/PositionAbsolute.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/initializers/PositionAbsolute.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/initializers/Velocity.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/initializers/Velocity.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/threeD/papervision3d/initializers/PV3DObjectClass.as" afterPath="$PROJECT_DIR$/org/flintparticles/threeD/papervision3d/initializers/PV3DObjectClass.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/actions/TurnTowardsPoint.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/actions/TurnTowardsPoint.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/renderers/BitmapLineRenderer.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/renderers/BitmapLineRenderer.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/threeD/particles/Particle3DUtils.as" afterPath="$PROJECT_DIR$/org/flintparticles/threeD/particles/Particle3DUtils.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.NET Libraries/Test Server Project/bin/Debug/Test Server.exe" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/actions/TurnTowardsMouse.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/actions/TurnTowardsMouse.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/actions/ApproachNeighbours.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/actions/ApproachNeighbours.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.NET Libraries/Test Server Project/obj/Debug/Test Server.csproj.FileListAbsolute.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/actions/SpeedLimit.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/actions/SpeedLimit.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/threeD/renderers/controllers/OrbitCamera.as" afterPath="$PROJECT_DIR$/org/flintparticles/threeD/renderers/controllers/OrbitCamera.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.NET Libraries/Test Server Project/obj/Debug/Test Server.pdb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/threeD/renderers/mxml/PixelRenderer.as" afterPath="$PROJECT_DIR$/org/flintparticles/threeD/renderers/mxml/PixelRenderer.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/actions/MatchVelocity.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/actions/MatchVelocity.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/actions/BoundingBox.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/actions/BoundingBox.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/validation.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/actions/RotationalLinearDrag.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/actions/RotationalLinearDrag.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/playerio/QuickConnect.as" afterPath="$PROJECT_DIR$/playerio/QuickConnect.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/playerio/Connection.as" afterPath="$PROJECT_DIR$/playerio/Connection.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/initializers/Rotation.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/initializers/Rotation.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/FocusManager.as" afterPath="$PROJECT_DIR$/septenary/duelparty/FocusManager.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dynamic.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/products/boards/default.xml" afterPath="$PROJECT_DIR$/products/boards/default.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/threeD/renderers/BitmapRenderer.as" afterPath="$PROJECT_DIR$/org/flintparticles/threeD/renderers/BitmapRenderer.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/screens/MultiplayerLoginScreen.as" afterPath="$PROJECT_DIR$/septenary/duelparty/screens/MultiplayerLoginScreen.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/renderers/PixelRenderer.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/renderers/PixelRenderer.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/screens/BoardExtroScreen.as" afterPath="$PROJECT_DIR$/septenary/duelparty/screens/BoardExtroScreen.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/initializers/RotateVelocity.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/initializers/RotateVelocity.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/threeD/papervision3d/utils/Convert.as" afterPath="$PROJECT_DIR$/org/flintparticles/threeD/papervision3d/utils/Convert.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.NET Libraries/Test Server Project/obj/Debug/Test Server.exe" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/renderers/DisplayObjectRenderer.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/renderers/DisplayObjectRenderer.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/activities/RotateEmitter.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/activities/RotateEmitter.as" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/BattleManager.as" afterPath="$PROJECT_DIR$/septenary/duelparty/BattleManager.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/threeD/renderers/controllers/FirstPersonCamera.as" afterPath="$PROJECT_DIR$/org/flintparticles/threeD/renderers/controllers/FirstPersonCamera.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.NET Libraries/Test Server Project/bin/Debug/Test Server.vshost.exe" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/zones/DiscZone.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/zones/DiscZone.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/activities/MoveEmitter.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/activities/MoveEmitter.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/threeD/zones/Zone3D.as" afterPath="$PROJECT_DIR$/org/flintparticles/threeD/zones/Zone3D.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/initializers/ScaleAllInit.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/initializers/ScaleAllInit.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/threeD/zones/GreyscaleZone.as" afterPath="$PROJECT_DIR$/org/flintparticles/threeD/zones/GreyscaleZone.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.NET Libraries/Test Server Project/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.NET Libraries/Test Server Project/bin/Debug/Test Server.vshost.exe.manifest" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/actions/TweenPosition.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/actions/TweenPosition.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/actions/ZonedAction.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/actions/ZonedAction.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/actions/Explosion.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/actions/Explosion.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.NET Libraries/Player.IO Development Server.exe" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/playerio/PlayerIOError.as" afterPath="$PROJECT_DIR$/playerio/PlayerIOError.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/actions/Jet.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/actions/Jet.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/actions/AntiGravity.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/actions/AntiGravity.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/zones/DiscSectorZone.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/zones/DiscSectorZone.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/zones/BitmapDataZone.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/zones/BitmapDataZone.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/screens/DirChoiceScreen.as" afterPath="$PROJECT_DIR$/septenary/duelparty/screens/DirChoiceScreen.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/particles/ParticleCreator2D.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/particles/ParticleCreator2D.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/threeD/renderers/PixelRenderer.as" afterPath="$PROJECT_DIR$/org/flintparticles/threeD/renderers/PixelRenderer.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/actions/MutualGravity.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/actions/MutualGravity.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/threeD/renderers/controllers/KeyboardControllerBase.as" afterPath="$PROJECT_DIR$/org/flintparticles/threeD/renderers/controllers/KeyboardControllerBase.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/threeD/particles/ParticleCreator3D.as" afterPath="$PROJECT_DIR$/org/flintparticles/threeD/particles/ParticleCreator3D.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/actions/RotationalFriction.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/actions/RotationalFriction.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/renderers/mxml/DisplayObjectRenderer.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/renderers/mxml/DisplayObjectRenderer.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/actions/Friction.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/actions/Friction.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/actions/RotateToDirection.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/actions/RotateToDirection.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/threeD/papervision3d/initializers/PV3DObjectClasses.as" afterPath="$PROJECT_DIR$/org/flintparticles/threeD/papervision3d/initializers/PV3DObjectClasses.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/actions/DeathZone.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/actions/DeathZone.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/NetworkManager.as" afterPath="$PROJECT_DIR$/septenary/duelparty/NetworkManager.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/threeD/renderers/DisplayObjectRenderer.as" afterPath="$PROJECT_DIR$/org/flintparticles/threeD/renderers/DisplayObjectRenderer.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/screens/DialogScreen.as" afterPath="$PROJECT_DIR$/septenary/duelparty/screens/DialogScreen.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/DuelParty.csproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/actions/ScaleAll.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/actions/ScaleAll.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/actions/Move.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/actions/Move.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.NET Libraries/Test Server Project/bin/Debug/Player.IO GameLibrary.dll" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/particles/Particle2DUtils.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/particles/Particle2DUtils.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/products/DuelParty.swf" afterPath="$PROJECT_DIR$/products/DuelParty.swf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/zones/RectangleZone.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/zones/RectangleZone.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/initializers/Position.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/initializers/Position.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/renderers/mxml/BitmapRenderer.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/renderers/mxml/BitmapRenderer.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/actions/TargetVelocity.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/actions/TargetVelocity.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/actions/Rotate.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/actions/Rotate.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/threeD/zones/ParallelogramZone.as" afterPath="$PROJECT_DIR$/org/flintparticles/threeD/zones/ParallelogramZone.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/actions/QuadraticDrag.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/actions/QuadraticDrag.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/activities/FollowMouse.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/activities/FollowMouse.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/threeD/renderers/Camera.as" afterPath="$PROJECT_DIR$/org/flintparticles/threeD/renderers/Camera.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/initializers/RotationAbsolute.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/initializers/RotationAbsolute.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DuelParty.iml" afterPath="$PROJECT_DIR$/DuelParty.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DuelParty.sln" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/actions/TweenToZone.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/actions/TweenToZone.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/playerio/PlayerIO.as" afterPath="$PROJECT_DIR$/playerio/PlayerIO.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/threeD/papervision3d/initializers/PV3DDisplayObjectClasses.as" afterPath="$PROJECT_DIR$/org/flintparticles/threeD/papervision3d/initializers/PV3DDisplayObjectClasses.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/actions/TargetRotateVelocity.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/actions/TargetRotateVelocity.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/actions/RandomDrift.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/actions/RandomDrift.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/screens/DiceRollScreen.as" afterPath="$PROJECT_DIR$/septenary/duelparty/screens/DiceRollScreen.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/screens/FighterSelectionScreen.as" afterPath="$PROJECT_DIR$/septenary/duelparty/screens/FighterSelectionScreen.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/actions/Collide.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/actions/Collide.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.NET Libraries/Test Server Project/Test Server.csproj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.NET Libraries/Test Server Project/Startup.cs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.NET Libraries/Player.IO GameLibrary.dll" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.NET Libraries/Test Server Project/bin/Debug/Development Server Settings.nonobadb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/threeD/zones/SphereZone.as" afterPath="$PROJECT_DIR$/org/flintparticles/threeD/zones/SphereZone.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/emitters/mxml/Emitter2D.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/emitters/mxml/Emitter2D.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/actions/MatchRotateVelocity.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/actions/MatchRotateVelocity.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/zones/MultiZone.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/zones/MultiZone.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/threeD/renderers/controllers/mxml/FirstPersonCamera.as" afterPath="$PROJECT_DIR$/org/flintparticles/threeD/renderers/controllers/mxml/FirstPersonCamera.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/ui/FocusableTextField.as" afterPath="$PROJECT_DIR$/septenary/duelparty/ui/FocusableTextField.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/threeD/zones/FrustrumZone.as" afterPath="$PROJECT_DIR$/org/flintparticles/threeD/zones/FrustrumZone.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/screens/MultiplayerLobbyScreen.as" afterPath="$PROJECT_DIR$/septenary/duelparty/screens/MultiplayerLobbyScreen.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/Game.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/threeD/zones/CylinderZone.as" afterPath="$PROJECT_DIR$/org/flintparticles/threeD/zones/CylinderZone.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/playerio/Multiplayer.as" afterPath="$PROJECT_DIR$/playerio/Multiplayer.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/particles/Particle2D.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/particles/Particle2D.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/actions/MouseAntiGravity.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/actions/MouseAntiGravity.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/excludeFromValidation.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/threeD/zones/ConeZone.as" afterPath="$PROJECT_DIR$/org/flintparticles/threeD/zones/ConeZone.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/actions/GravityWell.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/actions/GravityWell.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/threeD/zones/BitmapDataZone.as" afterPath="$PROJECT_DIR$/org/flintparticles/threeD/zones/BitmapDataZone.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/renderers/mxml/VectorLineRenderer.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/renderers/mxml/VectorLineRenderer.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/zones/DisplayObjectZone.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/zones/DisplayObjectZone.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.NET Libraries/Test Server Project/obj/Debug/ResolveAssemblyReference.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/DuelParty.as" afterPath="$PROJECT_DIR$/septenary/duelparty/DuelParty.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/actions/MinimumDistance.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/actions/MinimumDistance.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/threeD/renderers/mxml/DisplayObjectRenderer.as" afterPath="$PROJECT_DIR$/org/flintparticles/threeD/renderers/mxml/DisplayObjectRenderer.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/boardtiles/DamageTrapTile.as" afterPath="$PROJECT_DIR$/septenary/duelparty/boardtiles/DamageTrapTile.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/renderers/mxml/BitmapLineRenderer.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/renderers/mxml/BitmapLineRenderer.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.NET Libraries/Test Server Project/bin/Debug/Test Server.pdb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/NetScreen.as" afterPath="$PROJECT_DIR$/septenary/duelparty/NetScreen.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/threeD/renderers/controllers/CameraController.as" afterPath="$PROJECT_DIR$/org/flintparticles/threeD/renderers/controllers/CameraController.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/threeD/renderers/controllers/mxml/OrbitCamera.as" afterPath="$PROJECT_DIR$/org/flintparticles/threeD/renderers/controllers/mxml/OrbitCamera.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/zones/PointZone.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/zones/PointZone.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DuelParty.fla" afterPath="$PROJECT_DIR$/DuelParty.fla" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.NET Libraries/Test Server Project/bin/Debug/Player.IO GameLibrary.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/threeD/zones/PointZone.as" afterPath="$PROJECT_DIR$/org/flintparticles/threeD/zones/PointZone.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/threeD/zones/LineZone.as" afterPath="$PROJECT_DIR$/org/flintparticles/threeD/zones/LineZone.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/threeD/renderers/controllers/mxml/KeyboardControllerMxml.as" afterPath="$PROJECT_DIR$/org/flintparticles/threeD/renderers/controllers/mxml/KeyboardControllerMxml.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/Player.as" afterPath="$PROJECT_DIR$/septenary/duelparty/Player.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/PlayerData.as" afterPath="$PROJECT_DIR$/septenary/duelparty/PlayerData.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/threeD/particles/Particle3D.as" afterPath="$PROJECT_DIR$/org/flintparticles/threeD/particles/Particle3D.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/threeD/zones/MultiZone.as" afterPath="$PROJECT_DIR$/org/flintparticles/threeD/zones/MultiZone.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/septenary/duelparty/GameBoard.as" afterPath="$PROJECT_DIR$/septenary/duelparty/GameBoard.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.NET Libraries/Player.IO GameLibrary.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/actions/MouseGravity.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/actions/MouseGravity.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/actions/Accelerate.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/actions/Accelerate.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/playerio/Client.as" afterPath="$PROJECT_DIR$/playerio/Client.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/renderers/BitmapRenderer.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/renderers/BitmapRenderer.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/templateLanguages.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/initializers/ScaleAllsInit.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/initializers/ScaleAllsInit.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/zones/LineZone.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/zones/LineZone.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/emitters/Emitter2D.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/emitters/Emitter2D.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/actions/TurnAwayFromMouse.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/actions/TurnAwayFromMouse.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/actions/DeathSpeed.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/actions/DeathSpeed.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/actions/LinearDrag.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/actions/LinearDrag.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/renderers/VectorLineRenderer.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/renderers/VectorLineRenderer.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/threeD/renderers/mxml/BitmapRenderer.as" afterPath="$PROJECT_DIR$/org/flintparticles/threeD/renderers/mxml/BitmapRenderer.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/org/flintparticles/twoD/renderers/mxml/PixelRenderer.as" afterPath="$PROJECT_DIR$/org/flintparticles/twoD/renderers/mxml/PixelRenderer.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.NET Libraries/Test Server Project/bin/Debug/Player.IO Development Server.exe" />
     </list>
-    <ignored path=".idea/workspace.xml" />
     <ignored path="DuelParty.iws" />
+    <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,10 +240,55 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="MultiplayerLobbyScreen.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/septenary/duelparty/screens/MultiplayerLobbyScreen.as">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="149" column="82" selection-start="6704" selection-end="6786" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BoardExtroScreen.as" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/septenary/duelparty/screens/BoardExtroScreen.as">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="52" selection-start="552" selection-end="552" vertical-scroll-proportion="0.4755245">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MultiplayerLoginScreen.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/septenary/duelparty/screens/MultiplayerLoginScreen.as">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="68" column="8" selection-start="2852" selection-end="3509" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="NetworkManager.as" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/septenary/duelparty/NetworkManager.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="20" selection-start="1088" selection-end="1122" vertical-scroll-proportion="0.0">
+            <state line="88" column="44" selection-start="3534" selection-end="3534" vertical-scroll-proportion="-11.538462">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NetworkMessage.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/septenary/duelparty/NetworkMessage.as">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="81" column="56" selection-start="3090" selection-end="3090" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameBoard.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/septenary/duelparty/GameBoard.as">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="355" column="55" selection-start="13171" selection-end="13171" vertical-scroll-proportion="-13.615385">
               <folding />
             </state>
           </provider>
@@ -94,7 +297,16 @@
       <file leaf-file-name="BattleManager.as" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/septenary/duelparty/BattleManager.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="98" column="39" selection-start="4093" selection-end="4093" vertical-scroll-proportion="0.0">
+            <state line="165" column="37" selection-start="6517" selection-end="6517" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DamageTrapTile.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/septenary/duelparty/boardtiles/DamageTrapTile.as">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="34" column="19" selection-start="1065" selection-end="1065" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -103,70 +315,16 @@
       <file leaf-file-name="DuelParty.as" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/septenary/duelparty/DuelParty.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="80" selection-start="1668" selection-end="1668" vertical-scroll-proportion="0.0">
+            <state line="33" column="46" selection-start="1109" selection-end="1109" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Screen.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/septenary/duelparty/Screen.as">
+      <file leaf-file-name="MainMenuScreen.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/septenary/duelparty/screens/MainMenuScreen.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="108" column="27" selection-start="3596" selection-end="3596" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NetScreen.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/septenary/duelparty/NetScreen.as">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="36" selection-start="216" selection-end="216" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DiceRollScreen.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/septenary/duelparty/screens/DiceRollScreen.as">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="41" selection-start="1449" selection-end="1449" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Focusable.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/septenary/duelparty/Focusable.as">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="28" selection-start="679" selection-end="679" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FocusManager.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/septenary/duelparty/FocusManager.as">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="26" selection-start="1298" selection-end="1298" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BattleScreen.as" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/septenary/duelparty/screens/BattleScreen.as">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="92" column="28" selection-start="3336" selection-end="3336" vertical-scroll-proportion="0.76363635">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="default.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/products/boards/default.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="69" selection-start="886" selection-end="886" vertical-scroll-proportion="0.0">
+            <state line="18" column="71" selection-start="674" selection-end="746" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -189,30 +347,30 @@
     <option name="LINE_SEPARATORS_CONVERSION_ASK" value="false" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/septenary/duelparty/GameBoard.as" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/septenary/duelparty/boardtiles/MineTile.as" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/septenary/duelparty/boardtiles/HealingTile.as" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/septenary/duelparty/NetworkManager.as" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/septenary/duelparty/boardtiles/HealingTile.as" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/septenary/duelparty/boardtiles/MineTile.as" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/septenary/duelparty/GameBoard.as" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/septenary/duelparty/screens/GameScreen.as" />
-        <option value="$PROJECT_DIR$/septenary/duelparty/ui/GUIAnimationFactory.as" />
-        <option value="$PROJECT_DIR$/septenary/duelparty/screens/MapBuilderMenuScreen.as" />
-        <option value="$PROJECT_DIR$/septenary/duelparty/screens/DialogBoxScreen.as" />
-        <option value="$PROJECT_DIR$/septenary/duelparty/ui/FighterInfo.as" />
-        <option value="$PROJECT_DIR$/septenary/duelparty/screens/GameInterfaceScreen.as" />
-        <option value="$PROJECT_DIR$/septenary/duelparty/ui/DataButton.as" />
-        <option value="$PROJECT_DIR$/septenary/duelparty/IFightmaster.as" />
-        <option value="$PROJECT_DIR$/septenary/duelparty/projectiles/IMovementBehaviour.as" />
-        <option value="$PROJECT_DIR$/septenary/duelparty/screens/TurnOrderSelectionScreen.as" />
-        <option value="$PROJECT_DIR$/septenary/duelparty/NetworkManager.as" />
-        <option value="$PROJECT_DIR$/septenary/duelparty/DuelParty.as" />
         <option value="/Volumes/TIPZSUSB/Armorail/BattleManager.as" />
         <option value="$PROJECT_DIR$/septenary/duelparty/screens/BattleScreen.as" />
         <option value="$PROJECT_DIR$/septenary/duelparty/BattleManager.as" />
+        <option value="$PROJECT_DIR$/septenary/duelparty/boardtiles/DamageTrapTile.as" />
         <option value="$PROJECT_DIR$/products/boards/default.xml" />
+        <option value="$PROJECT_DIR$/septenary/duelparty/Player.as" />
+        <option value="$PROJECT_DIR$/septenary/duelparty/ui/FocusableTextField.as" />
+        <option value="$PROJECT_DIR$/septenary/duelparty/screens/MultiplayerLoginScreen.as" />
+        <option value="$PROJECT_DIR$/septenary/duelparty/FocusManager.as" />
+        <option value="$PROJECT_DIR$/septenary/duelparty/DuelParty.as" />
+        <option value="$PROJECT_DIR$/septenary/duelparty/PlayerData.as" />
+        <option value="$PROJECT_DIR$/septenary/duelparty/NetworkManager.as" />
+        <option value="$PROJECT_DIR$/septenary/duelparty/NetworkMessage.as" />
+        <option value="$PROJECT_DIR$/septenary/duelparty/screens/MultiplayerLobbyScreen.as" />
+        <option value="$PROJECT_DIR$/septenary/duelparty/GameBoard.as" />
+        <option value="$PROJECT_DIR$/septenary/duelparty/screens/BoardExtroScreen.as" />
       </list>
     </option>
   </component>
@@ -309,8 +467,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Favorites" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -365,7 +521,51 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Duel Party" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Duel Party" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="septenary" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="duelparty" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="screens" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Duel Party" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Duel Party" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="septenary" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="duelparty" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="boardtiles" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -425,29 +625,31 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
+              <option name="myItemId" value="playerio" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Favorites" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="109" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="146" />
     <property name="project.structure.proportion" value="0.15" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="146" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="120" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="MemberChooser.sorted" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="120" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Documents/School/CS 246/Assignment 1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="129" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="923" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="920" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="923" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="125" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="142" />
     <property name="GoToClass.includeJavaFiles" value="false" />
@@ -738,7 +940,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32884902" sideWeight="0.3364116" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295964" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3295964" sideWeight="0.6622691" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27653214" sideWeight="0.6622691" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -829,99 +1031,114 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/septenary/duelparty/projectiles/IMovementBehaviour.as">
+    <entry file="file://$PROJECT_DIR$/septenary/duelparty/screens/DialogScreen.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="70" selection-start="211" selection-end="211" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/septenary/duelparty/screens/BoardIntroScreen.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="49" selection-start="611" selection-end="611" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/septenary/duelparty/screens/TurnOrderSelectionScreen.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="78" selection-start="2204" selection-end="2204" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/products/boards/Level1.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="218" column="39" selection-start="5285" selection-end="5285" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/septenary/duelparty/Singleton.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="17" selection-start="173" selection-end="173" vertical-scroll-proportion="0.0">
+        <state line="6" column="43" selection-start="216" selection-end="216" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/septenary/duelparty/Focusable.as">
+    <entry file="file://$PROJECT_DIR$/septenary/duelparty/screens/GameInterfaceScreen.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="28" selection-start="679" selection-end="679" vertical-scroll-proportion="0.0">
+        <state line="51" column="115" selection-start="1815" selection-end="1815" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/septenary/duelparty/NetScreen.as">
+    <entry file="file://$PROJECT_DIR$/septenary/duelparty/Sprite3D.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="36" selection-start="216" selection-end="216" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/septenary/duelparty/screens/DiceRollScreen.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="41" selection-start="1449" selection-end="1449" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/septenary/duelparty/Screen.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="108" column="27" selection-start="3596" selection-end="3596" vertical-scroll-proportion="0.0">
+        <state line="11" column="26" selection-start="368" selection-end="368" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/septenary/duelparty/FocusManager.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="26" selection-start="1298" selection-end="1298" vertical-scroll-proportion="0.0">
+        <state line="26" column="34" selection-start="1004" selection-end="1004" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/septenary/duelparty/DuelParty.as">
+    <entry file="file://$PROJECT_DIR$/septenary/duelparty/PlayerData.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="80" selection-start="1668" selection-end="1668" vertical-scroll-proportion="0.0">
+        <state line="41" column="51" selection-start="1379" selection-end="1379" vertical-scroll-proportion="-11.884615">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/septenary/duelparty/ui/FocusableTextField.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="99" selection-start="962" selection-end="962" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/septenary/duelparty/NetworkMessage.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="81" column="56" selection-start="3090" selection-end="3090" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/septenary/duelparty/screens/MultiplayerLoginScreen.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="68" column="8" selection-start="2852" selection-end="3509" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/septenary/duelparty/NetworkManager.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="20" selection-start="1088" selection-end="1122" vertical-scroll-proportion="0.0">
+        <state line="88" column="44" selection-start="3534" selection-end="3534" vertical-scroll-proportion="-11.538462">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/septenary/duelparty/screens/MultiplayerLobbyScreen.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="149" column="82" selection-start="6704" selection-end="6786" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/septenary/duelparty/DuelParty.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="46" selection-start="1109" selection-end="1109" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/septenary/duelparty/screens/MainMenuScreen.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="71" selection-start="674" selection-end="746" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/septenary/duelparty/BattleManager.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="39" selection-start="4093" selection-end="4093" vertical-scroll-proportion="0.0">
+        <state line="165" column="37" selection-start="6517" selection-end="6517" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/products/boards/default.xml">
+    <entry file="file://$PROJECT_DIR$/septenary/duelparty/boardtiles/DamageTrapTile.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="69" selection-start="886" selection-end="886" vertical-scroll-proportion="0.0">
+        <state line="34" column="19" selection-start="1065" selection-end="1065" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/septenary/duelparty/screens/BattleScreen.as">
+    <entry file="file://$PROJECT_DIR$/septenary/duelparty/GameBoard.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="28" selection-start="3336" selection-end="3336" vertical-scroll-proportion="0.76363635">
+        <state line="355" column="55" selection-start="13171" selection-end="13171" vertical-scroll-proportion="-13.615385">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/septenary/duelparty/screens/BoardExtroScreen.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="52" selection-start="552" selection-end="552" vertical-scroll-proportion="0.4755245">
           <folding />
         </state>
       </provider>

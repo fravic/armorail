@@ -2,46 +2,45 @@ package septenary.duelparty {
 
 	public class PlayerData {
 
-        protected var _playerNum:int;
-		protected var _display:String;
-		protected var _name:String;
-		protected var _inputSource:int;
-		protected var _netID:String;
-		protected var _color:int;
-		protected var _rank:int;
+        public var playerNum:int;
+		public var display:String;
+		public var name:String;
+		public var inputSource:int;
+		public var netID:String;
+		public var color:int;
+		public var rating:int;
+        public var experience:int;
+        public var numWins:int;
+        public var numLosses:int;
 
-        public function get playerNum():int {
-            return _playerNum;
+        public function PlayerData() {
+            //Set default values.  THESE VALUES WILL BE USED IN GAME TO SETUP A NEW PLAYER!
+            playerNum =    0;
+			display =      "PlayerBlue";
+			name =         "Guest";
+			inputSource =  NetScreen.PLAYER_INPUT;
+			netID =        "Guest";
+			color =        0xFF0000;
+			rating =       0;
+            numWins =      0;
+            numLosses =    0;
+            experience =   0;
+		}
+
+        public function getSavableObject():Object {
+            return {name:name, rating:rating, numWins:numWins, numLosses:numLosses, experience:experience};
         }
-        public function get display():String {
-			return _display;
-		}
-		public function get name():String {
-			return _name;
-		}
-		public function get inputSource():int {
-			return _inputSource;
-		}
-		public function get netID():String {
-			return _netID;
-		}
-		public function get color():int {
-			return _color;
-		}
-		public function get rank():int {
-			return _rank;
-		}
-		
-		public function PlayerData(num:int, display:String, name:String, inputSource:int, netID:String, color:int,
-                                   rank:int) {
-            _playerNum = num;
-			_display = display;
-			_name = name;
-			_inputSource = inputSource;
-			_netID = netID;
-			_color = color;
-			_rank = rank;
-		}
 
-	}
+        public function loadFromDatabase(database:Object):void {
+            name =         nn(database.name, name);
+            rating =       nn(database.rating, rating);
+            numWins =      nn(database.numWins, numWins);
+            numLosses =    nn(database.numLosses, numLosses);
+            experience =   nn(database.experience, experience);
+        }
+
+        protected function nn(value:*, defaultVal:*):* {
+            return value != null ? value : defaultVal;
+        }
+    }
 }

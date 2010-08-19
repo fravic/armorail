@@ -2,20 +2,21 @@ package septenary.duelparty.screens {
     import septenary.duelparty.*;
 
     import flash.utils.Dictionary;
+    import flash.events.MouseEvent;
 
     public class BoardExtroScreen extends Screen {
 
         protected var _players:Array;
-        protected var _local:Player;
-        protected var _statsForPlayers:Dictionary;
+        protected var _statsForPlayers:Dictionary = new Dictionary();
 
-        public function BoardExtroScreen(local:Player, players:Array, victory:Boolean) {
+        protected var _resultsVisible:Boolean = true;
+
+        public function BoardExtroScreen(players:Array, victory:Boolean) {
             const boxTopY:Number = 200;
             const boxSpacing:Number = 200;
 
             _alwaysOnTop = true;
 
-            _local = local;
             _players = players;
 
             var placements:Array = Singleton.get(GameInterfaceScreen).placementsForPlayers(_players);
@@ -25,10 +26,14 @@ package septenary.duelparty.screens {
                 box.x = DuelParty.stageWidth/2;
                 box.y = i * boxSpacing + boxTopY;
                 addChild(box);
+                _statsForPlayers[players[i]] = box;
             }
 
             Singleton.get(GameScreen).darken();
             Singleton.get(GameInterfaceScreen).hidePlayerInterfaces();
+
+            btnHideResults.lbl.text = "Hide Results";
+            btnLobby.lbl.text = "Exit - Lobby";
 
             super();
         }
@@ -43,7 +48,7 @@ package septenary.duelparty.screens {
             newBox.lblCreepKills.text = player.gameStats.creepKills;
             newBox.placement.gotoAndStop(placement);
 
-            if (player == _local) {
+            if (Singleton.get(NetworkManager).isLocalPlayerNetID(player.playerData.netID)) {
                     
             } else {
                 
@@ -52,9 +57,39 @@ package septenary.duelparty.screens {
             return newBox;
         }
 
-        protected function closeExtro():void {
-            Singleton.get(GameScreen).unDarken();
-            Singleton.get(GameInterfaceScreen).showPlayerInterfaces();
+        protected function buttonAction(e:MouseEvent):void {
+            if (e.target == btnHideResults) {
+                toggleExtroVisibility();
+            } else if (e.target == btnLobby) {
+                Singleton.get(DuelParty).switchState(MainMenuScreen, {});
+            }
         }
+
+        protected function toggleExtroVisibility():void {
+            if (_resultsVisible) {
+                Singleton.get(GameScreen).unDarken();
+                Singleton.get(GameInterfaceScreen).showPlayerInterfaces();
+                btnHideResults.lbl.text = "Show Results";
+            } else {
+                Singleton.get(GameScreen).darken();
+                Singleton.get(GameInterfaceScreen).hidePlayerInterfaces();
+                btnHideResults.lbl.text = "Hide Results";
+            }
+
+            _resultsVisible = !_resultsVisible;
+            for each (var box:EndStatsBox in _statsForPlayers) {
+                box.visible = _resultsVisible;
+            }
+        }
+
+        public override function gainedFocus():void {
+            super.gainedFocus();
+            getFocusManager().addGeneralFocusableListener(this, buttonAction);
+        }
+
+		public override function lostFocus():void {
+            super.lostFocus();
+            getFocusManager().removeGeneralFocusableListener(this, buttonAction);
+		}
     }
 }

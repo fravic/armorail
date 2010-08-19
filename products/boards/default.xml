@@ -15,56 +15,56 @@
       <startPlayer>1</startPlayer>
     </tile>
     <tile id="2" x="195" y="510">
-      <type>Mine</type>
+      <type>DamageTrap</type>
       <tilesOut>
         <tileOut>3</tileOut>
       </tilesOut>
     </tile>
     <tile id="3" x="480" y="510">
-      <type>Boost</type>
+      <type>DamageTrap</type>
       <tilesOut>
         <tileOut>4</tileOut>
         <tileOut>8</tileOut>
       </tilesOut>
     </tile>
     <tile id="4" x="480" y="315">
-      <type>Mine</type>
+      <type>DamageTrap</type>
       <tilesOut>
         <tileOut>5</tileOut>
       </tilesOut>
     </tile>
     <tile id="5" x="705" y="315">
-      <type>Mine</type>
+      <type>DamageTrap</type>
       <tilesOut>
         <tileOut>6</tileOut>
       </tilesOut>
     </tile>
     <tile id="6" x="705" y="135">
-      <type>Mine</type>
+      <type>DamageTrap</type>
       <tilesOut>
         <tileOut>7</tileOut>
       </tilesOut>
     </tile>
     <tile id="7" x="435" y="135">
-      <type>Mine</type>
+      <type>DamageTrap</type>
       <tilesOut>
         <tileOut>0</tileOut>
       </tilesOut>
     </tile>
     <tile id="8" x="480" y="720">
-      <type>Mine</type>
+      <type>DamageTrap</type>
       <tilesOut>
         <tileOut>9</tileOut>
       </tilesOut>
     </tile>
     <tile id="9" x="720" y="720">
-      <type>Mine</type>
+      <type>DamageTrap</type>
       <tilesOut>
         <tileOut>10</tileOut>
       </tilesOut>
     </tile>
     <tile id="10" x="915" y="510">
-      <type>Mine</type>
+      <type>DamageTrap</type>
       <tilesOut>
         <tileOut>5</tileOut>
       </tilesOut>

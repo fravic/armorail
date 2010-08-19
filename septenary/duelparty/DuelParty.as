@@ -43,10 +43,15 @@ package septenary.duelparty {
             addChild(new BlackTransitionScreen());
 
             CONFIG::SINGLE_PLAYER {
-                switchState(GameScreen, {boardType:"default", playerDatas:[new PlayerData(0, "PlayerBlue", "Fravic",
-                                                                         NetScreen.PLAYER_INPUT, "fravic", 0xFF0000, 0),
-                                                                           new PlayerData(0, "PlayerOrange", "Tim", 
-                                                                         NetScreen.PLAYER_INPUT, "tim", 0x0000FF, 0)]});
+                var player1:PlayerData = new PlayerData();
+                player1.name = player1.netID = "Fravic";
+                player1.display = "PlayerBlue";
+                player1.color = 0xFF0000;
+                var player2:PlayerData = new PlayerData();
+                player2.name = player2.netID = "Fernando";
+                player2.display = "PlayerOrange";
+                player2.color = 0x0000FF;
+                switchState(GameScreen, {boardType:"default", playerDatas:[player1, player2]});
                 return;
             }
 			switchState(MainMenuScreen, {});

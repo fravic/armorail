@@ -13,9 +13,9 @@ package playerio{
 		*/
 		public static const GeneralError:PlayerIOError = new PlayerIOError("A general error occured",1);
 		/**
-		* PlayerIOError type if an internal error occured
+		* PlayerIOError type if an unexpected error occured inside the Player.IO webservice. Please try again.
 		*/
-		public static const InternalError:PlayerIOError = new PlayerIOError("An internal error occured",2);
+		public static const InternalError:PlayerIOError = new PlayerIOError("An unexpected error occured inside the Player.IO webservice. Please try again.",2);
 		/**
 		* PlayerIOError type if access is denied
 		*/
@@ -40,6 +40,10 @@ package playerio{
 		* PlayerIOError type if the given argument value is outside the range of allowed values.
 		*/
 		public static const ArgumentOutOfRange:PlayerIOError = new PlayerIOError("The given argument value is outside the range of allowed values.",8);
+		/**
+		* PlayerIOError type if the game has been disabled, most likely because of missing payment.
+		*/
+		public static const GameDisabled:PlayerIOError = new PlayerIOError("The game has been disabled, most likely because of missing payment.",9);
 		/**
 		* PlayerIOError type if the game requested is not known by the server
 		*/
@@ -132,6 +136,14 @@ package playerio{
 		* PlayerIOError type if the key is in use by another database object
 		*/
 		public static const KeyAlreadyUsed:PlayerIOError = new PlayerIOError("The key is in use by another database object",32);
+		/**
+		* PlayerIOError type if bigDB object could not be saved using optimistic locks as it's out of date.
+		*/
+		public static const StaleVersion:PlayerIOError = new PlayerIOError("BigDB object could not be saved using optimistic locks as it's out of date.",33);
+		/**
+		* PlayerIOError type if cannot create circular references inside database objects
+		*/
+		public static const CircularReference:PlayerIOError = new PlayerIOError("Cannot create circular references inside database objects",34);
 		/**
 		* @private
 		*/

@@ -28,7 +28,7 @@ package septenary.duelparty.boardtiles {
                 damageFront = rand != 0;
             } else damageFront = (player.foreGuard != null);
 
-            GameEvent.addOneTimeEventListener(player, GameEvent.ACTION_COMPLETE, damageDone);
+            GameEvent.addOneTimeEventListener(player, GameEvent.DAMAGE_DONE, damageDone);
             player.damage(_damage, damageFront, true);
         }
 
