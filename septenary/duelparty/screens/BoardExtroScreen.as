@@ -12,6 +12,8 @@ package septenary.duelparty.screens {
         protected var _resultsVisible:Boolean = true;
 
         public function BoardExtroScreen(players:Array, victory:Boolean) {
+            super();
+
             const boxTopY:Number = 200;
             const boxSpacing:Number = 200;
 
@@ -34,8 +36,6 @@ package septenary.duelparty.screens {
 
             btnHideResults.lbl.text = "Hide Results";
             btnLobby.lbl.text = "Exit - Lobby";
-
-            super();
         }
 
         protected function endStatsBoxForPlayer(player:Player, placement:int):EndStatsBox {
@@ -61,7 +61,7 @@ package septenary.duelparty.screens {
             if (e.target == btnHideResults) {
                 toggleExtroVisibility();
             } else if (e.target == btnLobby) {
-                Singleton.get(DuelParty).switchState(MainMenuScreen, {});
+                dispatchEvent(new GameEvent(GameEvent.ACTION_COMPLETE));
             }
         }
 

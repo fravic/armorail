@@ -67,7 +67,7 @@ package septenary.duelparty.screens {
             function darkened():void {
                 dispatchEvent(new GameEvent(GameEvent.ACTION_COMPLETE));
             }
-            TweenLite.to(_darkOverlay, fadeDuration, {alpha:1, onComplete:darkened});
+            TweenLite.to(_darkOverlay, fadeDuration, {alpha:1, overwrite:1, onComplete:darkened});
         }
 
         public function unDarken():void {
@@ -78,7 +78,11 @@ package septenary.duelparty.screens {
                 _darkOverlay = null;
                 dispatchEvent(new GameEvent(GameEvent.ACTION_COMPLETE));
             }
-            TweenLite.to(_darkOverlay, fadeDuration, {alpha:0, onComplete:unDarkened});
+            TweenLite.to(_darkOverlay, fadeDuration, {alpha:0, overwrite:1, onComplete:unDarkened});
+        }
+
+        public function exitGame():void {
+            Singleton.get(DuelParty).switchState(MainMenuScreen, {});
         }
 
         protected function keepTargetZoomInRange(targ:Number, boardParam:Number, screenParam:Number,

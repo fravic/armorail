@@ -62,6 +62,8 @@ package septenary.duelparty {
 		}
 		
 		public function switchState(State:Class, screenData:Object):void {
+            trace("SWITCHING STATE!");
+
 			if (_currentState != null) {
                 _currentState.lostFocus();
 				removeChild(_currentState);
