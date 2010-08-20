@@ -7,6 +7,7 @@ package septenary.duelparty {
 		public var name:String;
 		public var inputSource:int;
 		public var netID:String;
+        public var databaseID:String;
 		public var color:int;
 		public var rating:int;
         public var experience:int;
@@ -20,6 +21,7 @@ package septenary.duelparty {
 			name =         "Guest";
 			inputSource =  NetScreen.PLAYER_INPUT;
 			netID =        "Guest";
+            databaseID =   "Guest";
 			color =        0xFF0000;
 			rating =       0;
             numWins =      0;

@@ -2,6 +2,8 @@ package septenary.duelparty.ui {
     import septenary.duelparty.*;
 
     import flash.text.TextField;
+    import flash.events.FocusEvent;
+    import flash.events.Event;
 
     public class FocusableTextField extends Focusable {
 
@@ -31,22 +33,38 @@ package septenary.duelparty.ui {
             } else {
                 _prompt = _textField.text;
             }
+
+            _textField.addEventListener(FocusEvent.FOCUS_IN, onGainedFocus, false, 0, true);
+            _textField.addEventListener(FocusEvent.FOCUS_OUT, onLostFocus, false, 0, true);
+            _textField.addEventListener(Event.REMOVED_FROM_STAGE, tFRemovedFromStage, false, 0, true);
+        }
+
+        protected function tFRemovedFromStage(e:Event):void {
+            _textField.removeEventListener(FocusEvent.FOCUS_IN, onGainedFocus);
+            _textField.removeEventListener(FocusEvent.FOCUS_OUT, onLostFocus);
+            _textField.removeEventListener(Event.REMOVED_FROM_STAGE, tFRemovedFromStage);
         }
 
         public override function gainedFocus():void {
             super.gainedFocus();
             DuelParty.stage.focus = _textField;
-            
+            onGainedFocus();
+        }
+
+        public override function lostFocus():void {
+            DuelParty.stage.focus = null;
+            super.lostFocus();
+            onLostFocus();
+        }
+
+        protected function onGainedFocus(e:FocusEvent=null):void {
             if (_textField.text == _prompt) {
                 _textField.text = "";
                 _textField.displayAsPassword = _password;
             }
         }
 
-        public override function lostFocus():void {
-            DuelParty.stage.focus = null;
-            super.lostFocus();
-
+        protected function onLostFocus(e:FocusEvent=null):void {
             if (_textField.text == "") {
                 _textField.text = _prompt;
                 _textField.displayAsPassword = false;

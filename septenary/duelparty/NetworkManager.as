@@ -168,6 +168,15 @@ package septenary.duelparty {
 
         protected function handleSaveError(error:PlayerIOError):void {}
 
+        public function logout():void {
+            savePlayerDatabase();
+            _localPlayerGuestID = null;
+            _localPlayerDatabase = null;
+            _localPlayerData = null;
+            _activeConnection = null;
+            _activeClient = null;
+        }
+
         protected function netIDForGuestID(guestID:String):String {
             Utilities.assert(guestID != null, "Cannot form netID for null guestID!");
             return "Guest "+guestID;

@@ -21,9 +21,17 @@ package septenary.duelparty.screens {
         public function MultiplayerLobbyScreen(screenData:Object=null) {
             super();
 
-            btnQuickplay.lbl.text = QUICKPLAY;
-            btnQuickplay.data = QUICKPLAY;
+            btnQuickplay.lbl.text = btnQuickplay.data = QUICKPLAY;
             btnQuickplay.flashLevel = Focusable.SHORT_FLASH;
+
+            btnHostGame.lbl.text = btnHostGame.data = HOST_GAME;
+            btnHostGame.flashLevel = Focusable.SHORT_FLASH;
+
+            btnJoinGame.lbl.text = btnJoinGame.data = JOIN_GAME;
+            btnJoinGame.flashLevel = Focusable.SHORT_FLASH;
+
+            btnLogout.lbl.text = btnLogout.data = LOGOUT;
+            btnLogout.flashLevel = Focusable.SHORT_FLASH;
 
             displayUserInfo();
         }
@@ -44,7 +52,14 @@ package septenary.duelparty.screens {
 
             } else if (e.target.data == JOIN_GAME) {
 
+            } else if (e.target.data == LOGOUT) {
+                logout();
             }
+        }
+
+        protected function logout():void {
+            Singleton.get(NetworkManager).logout();
+            dispatchEvent(new GameEvent(GameEvent.ACTION_COMPLETE, {action:LOGOUT}));
         }
 
         protected function startQuickplay():void {
