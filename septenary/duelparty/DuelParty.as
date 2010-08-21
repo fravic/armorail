@@ -29,6 +29,7 @@ package septenary.duelparty {
             this.stage.scaleMode = StageScaleMode.NO_SCALE;
             this.stage.align = StageAlign.TOP_LEFT;
             this.stage.addEventListener(Event.RESIZE, stageResized);
+            this.tabEnabled = this.tabChildren = false;
 
             DuelParty.stageWidth = stage.stageWidth;
             DuelParty.stageHeight = stage.stageHeight;

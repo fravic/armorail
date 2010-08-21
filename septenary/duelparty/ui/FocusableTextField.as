@@ -2,8 +2,10 @@ package septenary.duelparty.ui {
     import septenary.duelparty.*;
 
     import flash.text.TextField;
+    import flash.text.TextFormat;
     import flash.events.FocusEvent;
     import flash.events.Event;
+    import flash.display.BlendMode;
 
     public class FocusableTextField extends Focusable {
 
@@ -12,31 +14,42 @@ package septenary.duelparty.ui {
         protected var _password:Boolean = false;
 
         public static function createFocusableTextField(textField:TextField, prompt:String=null):void {
-            textField.parent.addChild(new FocusableTextField(textField, prompt));
+            var fld:FocusableTextField = new FocusableTextField();
+            fld.init(textField);
+            fld.x = textField.x + textField.width/2;
+            fld.y = textField.y + textField.height/2;
+            textField.parent.addChild(fld);
         }
 
-        public function FocusableTextField(textField:TextField, prompt:String):void {
-            super();
-
+        public function init(textField:TextField, promptField:TextField=null, majorPrompt:String="",
+            minorPrompt:String="", displayAsPassword:Boolean=false):void {
             _textField = textField;
-            x = _textField.x + _textField.width/2;
-            y = _textField.y + _textField.height/2;
+            _password = displayAsPassword;
 
-            if (_textField.displayAsPassword) {
-                _textField.displayAsPassword = false;
-                _password = true;
-            }
+            flashLevel = Focusable.NO_FLASH;
 
-            if (prompt != null) {
-                _textField.text = prompt;
-                _prompt = prompt;
+            if (majorPrompt != null) {
+                _textField.text = majorPrompt;
+                _prompt = majorPrompt;
             } else {
                 _prompt = _textField.text;
+            }
+
+            if (promptField != null) {
+                var format:TextFormat = promptField.getTextFormat();
+                promptField.text = minorPrompt;
+                promptField.setTextFormat(format);
+                promptField.blendMode = BlendMode.LAYER;
+                promptField.alpha = .30;
             }
 
             _textField.addEventListener(FocusEvent.FOCUS_IN, onGainedFocus, false, 0, true);
             _textField.addEventListener(FocusEvent.FOCUS_OUT, onLostFocus, false, 0, true);
             _textField.addEventListener(Event.REMOVED_FROM_STAGE, tFRemovedFromStage, false, 0, true);
+        }
+
+        public function get text():String {
+            return _textField.text;    
         }
 
         protected function tFRemovedFromStage(e:Event):void {

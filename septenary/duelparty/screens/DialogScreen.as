@@ -191,7 +191,8 @@ package septenary.duelparty.screens {
 
         protected function setupDialogBoxTextInput():void {
 			var dBContent:DialogBoxTextInput = _content as DialogBoxTextInput;
-            FocusableTextField.createFocusableTextField((_content as DialogBoxTextInput).tFText);
+            var fldText:FocusableTextField = (_content as DialogBoxTextInput).fldText;
+            fldText.init(fldText.tF, fldText.tFPrompt);
 			dBContent.btnOk.lbl.text = "Continue";
 			trace(dBContent.btnOk.lbl.text);
         }

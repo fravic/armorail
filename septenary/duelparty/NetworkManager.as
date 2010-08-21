@@ -147,7 +147,7 @@ package septenary.duelparty {
 
             var errorMessage:String = "Unable to connect to server.";
             if (error is PlayerIORegistrationError) {
-                errorMessage = "This username has already been registered!  Please try another one.";
+                errorMessage = "This user has already been registered! Please try another.";
             } else if (error.type == PlayerIOError.InvalidPassword) {
                 errorMessage = "The password you entered is incorrect.";
             } else if (error.type == PlayerIOError.UnknownUser) {
